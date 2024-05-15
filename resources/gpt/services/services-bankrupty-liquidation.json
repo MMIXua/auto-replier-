@@ -1,0 +1,74 @@
+[
+      {
+        "name": "Merger, accession, division, transformation (reorganization) of companies",
+        "price": "234>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Liquidation of a company",
+        "price": "800>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Closure of branches, departments, representations",
+        "price": "400",
+        "value": "EUR"
+      },
+      {
+        "name": "Termination of entrepreneurial activity of an individual entrepreneur",
+        "price": "300",
+        "value": "EUR"
+      },
+      {
+        "name": "Express liquidation (alternative) of a company",
+        "options": [
+          {
+            "type": "for resident",
+            "price": "500",
+            "value": "EUR",
+            "additional_info": "notary + fee"
+          },
+          {
+            "type": "for non-resident",
+            "price": "1500",
+            "value": "EUR",
+            "additional_info": "notary + fee"
+          }
+        ]
+      },
+      {
+        "name": "Bankruptcy of a legal entity",
+        "price": "2760>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Liquidation of a foreign representation office (in general order)",
+        "price": "1500",
+        "value": "EUR"
+      },
+      {
+        "name": "Liquidation of an enterprise by the owner's decision (in general order)",
+        "price": "500",
+        "value": "EUR"
+      },
+      {
+        "name": "Liquidation of a joint-stock company (PJSC, JSC)",
+        "price": "1000>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Liquidation of a limited liability company (LLC)",
+        "price": "1000>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Liquidation of a subsidiary",
+        "price": "400>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Liquidation of a public organization",
+        "price": "400>?",
+        "value": "EUR"
+      }
+    ]

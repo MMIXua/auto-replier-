@@ -1,0 +1,828 @@
+2024-04-17T19:47:33.275843+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-04-17T19:47:33.627635+0300 | DEBUG | GmailSourceListener:listen:341 - Starting listeners
+2024-04-17T19:47:34.317059+0300 | INFO | GmailSourceListener:connect_imap:158 - Connected to imap
+2024-04-17T19:47:35.218807+0300 | INFO | GmailSourceListener:connect_smtp:172 - Connected to smtp
+2024-04-17T19:47:35.219223+0300 | INFO | GmailSourceListener:connect:84 - Connected to source
+2024-04-17T19:47:35.219429+0300 | DEBUG | GmailSourceListener:listen:345 - Started outcoming messages listener
+2024-04-17T19:47:35.219596+0300 | DEBUG | GmailSourceListener:listen:348 - Started incoming messages listener
+2024-04-17T19:47:35.222221+0300 | ERROR | GmailSourceListener:get_outcoming_messages:122 - Cannot connect to host 127.0.0.1:6660 ssl:default [Connect call failed ('127.0.0.1', 6660)]
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/connector.py", line 992, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)
+                 │    │     │                  │       └ {'ssl': None, 'family': 0, 'proto': 0, 'flags': 0, 'server_hostname': None, 'local_addr': None}
+                 │    │     │                  └ (functools.partial(<class 'aiohttp.client_proto.ResponseHandler'>, loop=<_UnixSelectorEventLoop running=True closed=False deb...
+                 │    │     └ <function BaseEventLoop.create_connection at 0x1055354e0>
+                 │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+                 └ <aiohttp.connector.TCPConnector object at 0x1099c6390>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1079, in create_connection
+    raise exceptions[0]
+          └ None
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1063, in create_connection
+    sock = await self._connect_sock(
+                 │    └ <function BaseEventLoop._connect_sock at 0x105535440>
+                 └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 967, in _connect_sock
+    await self.sock_connect(sock, address)
+          │    │            │     └ ('127.0.0.1', 6660)
+          │    │            └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+          │    └ <function BaseSelectorEventLoop.sock_connect at 0x105648040>
+          └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/selector_events.py", line 634, in sock_connect
+    return await fut
+                 └ None
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/selector_events.py", line 674, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+                  └ 61
+
+ConnectionRefusedError: [Errno 61] Connect call failed ('127.0.0.1', 6660)
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x104d905e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x10524eca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x104e1e450>
+         │    └ <function MultiCommand.invoke at 0x10524fec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x104e1e310>
+           │               │       │       └ <function Command.invoke at 0x10524f880>
+           │               │       └ <Command run_source>
+           │               └ <click.core.Context object at 0x104e1e310>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x10788fb00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'source_type': 'gmail'}
+           │   │      │    │           └ <click.core.Context object at 0x104e1e310>
+           │   │      │    └ <function run_source at 0x10525b880>
+           │   │      └ <Command run_source>
+           │   └ <function Context.invoke at 0x10524e200>
+           └ <click.core.Context object at 0x104e1e310>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'source_type': 'gmail'}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_source.py", line 25, in run_source
+    source_listener.listen()
+    │               └ <function BaseSourceListener.listen at 0x1079842c0>
+    └ <source_listener.gmail.GmailSourceListener object at 0x107988750>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 350, in listen
+    self.loop.run_until_complete(self.listen_incoming_messages())
+    │    │    │                  │    └ <function BaseSourceListener.listen_incoming_messages at 0x107984220>
+    │    │    │                  └ <source_listener.gmail.GmailSourceListener object at 0x107988750>
+    │    │    └ <function BaseEventLoop.run_until_complete at 0x1055345e0>
+    │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+    └ <source_listener.gmail.GmailSourceListener object at 0x107988750>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x105534540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x105536340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x1054c6c00>
+    └ <Handle Task.task_wakeup(<Future finis...0.1', 6660)")>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finis...0.1', 6660)")>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finis...0.1', 6660)")>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finis...0.1', 6660)")>)>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 245, in listen_outcoming_messages
+    await self.get_outcoming_messages()
+          │    └ <function BaseSourceListener.get_outcoming_messages at 0x10795bb00>
+          └ <source_listener.gmail.GmailSourceListener object at 0x107988750>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 118, in get_outcoming_messages
+    messages = await self._get_outcoming_messages()
+                     │    └ <function BaseSourceListener._get_outcoming_messages at 0x10795ba60>
+                     └ <source_listener.gmail.GmailSourceListener object at 0x107988750>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 92, in _get_outcoming_messages
+    async with http.get(f"{CONN_API}/messages", json={
+               │    └ <function ClientSession.get at 0x10788c360>
+               └ <aiohttp.client.ClientSession object at 0x1099c66d0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client.py", line 1194, in __aenter__
+    self._resp = await self._coro
+    │    │             │    └ <member '_coro' of '_BaseRequestContextManager' objects>
+    │    │             └ <aiohttp.client._RequestContextManager object at 0x1099a5c00>
+    │    └ <member '_resp' of '_BaseRequestContextManager' objects>
+    └ <aiohttp.client._RequestContextManager object at 0x1099a5c00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client.py", line 578, in _request
+    conn = await self._connector.connect(
+                 │    │          └ <function BaseConnector.connect at 0x1077f8fe0>
+                 │    └ <aiohttp.connector.TCPConnector object at 0x1099c6390>
+                 └ <aiohttp.client.ClientSession object at 0x1099c66d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+                  │    │                  │    │       └ ClientTimeout(total=300, connect=None, sock_read=None, sock_connect=None, ceil_threshold=5)
+                  │    │                  │    └ []
+                  │    │                  └ <aiohttp.client_reqrep.ClientRequest object at 0x1099c6310>
+                  │    └ <function TCPConnector._create_connection at 0x1077f9bc0>
+                  └ <aiohttp.connector.TCPConnector object at 0x1099c6390>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/connector.py", line 911, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+                     │    │                         │    │       └ ClientTimeout(total=300, connect=None, sock_read=None, sock_connect=None, ceil_threshold=5)
+                     │    │                         │    └ []
+                     │    │                         └ <aiohttp.client_reqrep.ClientRequest object at 0x1099c6310>
+                     │    └ <function TCPConnector._create_direct_connection at 0x1077fa2a0>
+                     └ <aiohttp.connector.TCPConnector object at 0x1099c6390>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1235, in _create_direct_connection
+    raise last_exc
+          └ ClientConnectorError(ConnectionKey(host='127.0.0.1', port=6660, is_ssl=False, ssl=True, proxy=None, proxy_auth=None, proxy_he...
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1204, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                          │    └ <function TCPConnector._wrap_create_connection at 0x1077f9e40>
+                          └ <aiohttp.connector.TCPConnector object at 0x1099c6390>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1000, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+          │            │   └ <property object at 0x1077b7c90>
+          │            └ <aiohttp.client_reqrep.ClientRequest object at 0x1099c6310>
+          └ <class 'aiohttp.client_exceptions.ClientConnectorError'>
+
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host 127.0.0.1:6660 ssl:default [Connect call failed ('127.0.0.1', 6660)]
+2024-04-17T19:47:35.251747+0300 | ERROR | GmailSourceListener:get_outcoming_messages:123 - Cant get outcoming messages
+2024-04-17T19:47:35.251873+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T19:47:35.423095+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T19:47:35.423260+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T19:47:35.423328+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:03:40.499102+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-04-17T20:03:40.798464+0300 | DEBUG | GmailSourceListener:listen:341 - Starting listeners
+2024-04-17T20:03:41.356180+0300 | INFO | GmailSourceListener:connect_imap:158 - Connected to imap
+2024-04-17T20:03:41.902921+0300 | INFO | GmailSourceListener:connect_smtp:172 - Connected to smtp
+2024-04-17T20:03:41.903101+0300 | INFO | GmailSourceListener:connect:84 - Connected to source
+2024-04-17T20:03:41.903202+0300 | DEBUG | GmailSourceListener:listen:345 - Started outcoming messages listener
+2024-04-17T20:03:41.903264+0300 | DEBUG | GmailSourceListener:listen:348 - Started incoming messages listener
+2024-04-17T20:03:42.099214+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:03:42.099460+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:03:42.099553+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:03:42.492888+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:03:42.493061+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:03:42.493109+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:03:47.271346+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:03:47.271817+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:03:47.271939+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:03:47.545930+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:03:47.546373+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:03:47.546469+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:03:52.484653+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:03:52.486162+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:03:52.486643+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:03:52.601614+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:03:52.601978+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:03:52.602102+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:03:57.654387+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:03:57.654863+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:03:57.654965+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:03:57.673398+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:03:57.673981+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:03:57.674380+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:04:02.708324+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:04:02.709104+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:04:02.709255+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:04:02.860868+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'365', b'SEARCH completed (Success)']
+2024-04-17T20:04:02.861208+0300 | INFO | GmailSourceListener:_get_incoming_messages:200 - Got new message -> 365
+2024-04-17T20:04:03.713557+0300 | INFO | GmailSourceListener:connect_imap:158 - Connected to imap
+2024-04-17T20:04:03.713996+0300 | ERROR | GmailSourceListener:_get_incoming_messages:212 - ListenerOutput.__init__() missing 1 required positional argument: 'id'
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x100b845e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x101042ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x100c12450>
+         │    └ <function MultiCommand.invoke at 0x101043ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x100c12310>
+           │               │       │       └ <function Command.invoke at 0x101043880>
+           │               │       └ <Command run_source>
+           │               └ <click.core.Context object at 0x100c12310>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x103583b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'source_type': 'gmail'}
+           │   │      │    │           └ <click.core.Context object at 0x100c12310>
+           │   │      │    └ <function run_source at 0x10104f9c0>
+           │   │      └ <Command run_source>
+           │   └ <function Context.invoke at 0x101042200>
+           └ <click.core.Context object at 0x100c12310>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'source_type': 'gmail'}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_source.py", line 25, in run_source
+    source_listener.listen()
+    │               └ <function BaseSourceListener.listen at 0x1036782c0>
+    └ <source_listener.gmail.GmailSourceListener object at 0x10359e810>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 350, in listen
+    self.loop.run_until_complete(self.listen_incoming_messages())
+    │    │    │                  │    └ <function BaseSourceListener.listen_incoming_messages at 0x103678220>
+    │    │    │                  └ <source_listener.gmail.GmailSourceListener object at 0x10359e810>
+    │    │    └ <function BaseEventLoop.run_until_complete at 0x1013285e0>
+    │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+    └ <source_listener.gmail.GmailSourceListener object at 0x10359e810>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x101328540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x10132a340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x1012bac00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 335, in listen_incoming_messages
+    await self.get_incoming_messages()
+          │    └ <function BaseSourceListener.get_incoming_messages at 0x10364bf60>
+          └ <source_listener.gmail.GmailSourceListener object at 0x10359e810>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 253, in get_incoming_messages
+    messages = await self._get_incoming_messages()
+                     │    └ <function GmailSourceListener._get_incoming_messages at 0x10395ae80>
+                     └ <source_listener.gmail.GmailSourceListener object at 0x10359e810>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/gmail.py", line 203, in _get_incoming_messages
+    message = await self.handle_message(message_id, message_bytes)
+                    │    │              │           └ bytearray(b'Delivered-To: manager.innovacg@gmail.com\r\nReceived: by 2002:a54:2e41:0:b0:255:8b95:c7df with SMTP id i1csp14171...
+                    │    │              └ '365'
+                    │    └ <function GmailSourceListener.handle_message at 0x10372f100>
+                    └ <source_listener.gmail.GmailSourceListener object at 0x10359e810>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/gmail.py", line 141, in handle_message
+    return ListenerOutput(
+           └ <class 'source_listener.output.ListenerOutput'>
+
+TypeError: ListenerOutput.__init__() missing 1 required positional argument: 'id'
+2024-04-17T20:04:03.902825+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:04:03.902943+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:04:03.902981+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:04:07.769062+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:04:07.769749+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:04:07.770064+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:04:09.086061+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:04:09.086700+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:04:09.086849+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:04:12.825194+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:04:12.825894+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:04:12.826070+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:04:14.268493+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:04:14.269557+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:04:14.269677+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:04:17.874831+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:04:17.875062+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:04:17.875128+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:04:19.452398+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:04:19.452915+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:04:19.453066+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:04:22.929450+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:04:22.932037+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:04:22.932167+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:04:24.634605+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:04:24.635165+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:04:24.635299+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:04:27.986236+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:04:27.986659+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:04:27.986832+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:04:29.831068+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:04:29.831418+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:04:29.831533+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:04:33.043661+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:04:33.044279+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:04:33.044409+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:04:35.002432+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:04:35.002733+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:04:35.002888+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:04:38.093689+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:04:38.093953+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:04:38.094040+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:04:40.176744+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:04:40.177155+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:04:40.177275+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:04:43.146745+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:04:43.147369+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:04:43.147510+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:04:45.351914+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:04:45.352081+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:04:45.352137+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:04:48.201908+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:04:48.202276+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:04:48.202375+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:04:50.532473+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:04:50.535409+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:04:50.535717+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:04:53.260339+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:04:53.261255+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:04:53.261459+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:04:55.706741+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:04:55.707212+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:04:55.707328+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:04:58.311678+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:04:58.311961+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:04:58.312058+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:05:00.889797+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:05:00.889997+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:05:00.890038+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:05:03.365176+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:05:03.365579+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:05:03.365719+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:05:06.082446+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:05:06.082894+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:05:06.083005+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:05:08.419649+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:05:08.419992+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:05:08.420101+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:05:11.253224+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:05:11.253716+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:05:11.254049+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:05:13.472576+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:05:13.472991+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:05:13.473096+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:05:16.601969+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:05:16.602101+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:05:16.602148+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:05:18.536118+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:05:18.536449+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:05:18.536555+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:05:21.770002+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:05:21.770232+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:05:21.770325+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:05:23.586105+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:05:23.586347+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:05:23.586420+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:05:26.943385+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:05:26.943584+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:05:26.943636+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:05:28.634891+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:05:28.635042+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:05:28.635092+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:05:32.121748+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:05:32.121866+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:05:32.121904+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:05:33.691737+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:05:33.692852+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:05:33.693025+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:05:37.321752+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:05:37.321970+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:05:37.322049+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:05:38.752982+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:05:38.753228+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:05:38.753306+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:05:42.494288+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:05:42.494599+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:05:42.494706+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:05:43.802829+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:05:43.802993+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:05:43.803041+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:05:47.678986+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'366', b'SEARCH completed (Success)']
+2024-04-17T20:05:47.679321+0300 | INFO | GmailSourceListener:_get_incoming_messages:200 - Got new message -> 366
+2024-04-17T20:05:48.445272+0300 | INFO | GmailSourceListener:connect_imap:158 - Connected to imap
+2024-04-17T20:05:48.445571+0300 | ERROR | GmailSourceListener:_get_incoming_messages:212 - ListenerOutput.__init__() missing 1 required positional argument: 'id'
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x100b845e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x101042ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x100c12450>
+         │    └ <function MultiCommand.invoke at 0x101043ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x100c12310>
+           │               │       │       └ <function Command.invoke at 0x101043880>
+           │               │       └ <Command run_source>
+           │               └ <click.core.Context object at 0x100c12310>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x103583b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'source_type': 'gmail'}
+           │   │      │    │           └ <click.core.Context object at 0x100c12310>
+           │   │      │    └ <function run_source at 0x10104f9c0>
+           │   │      └ <Command run_source>
+           │   └ <function Context.invoke at 0x101042200>
+           └ <click.core.Context object at 0x100c12310>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'source_type': 'gmail'}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_source.py", line 25, in run_source
+    source_listener.listen()
+    │               └ <function BaseSourceListener.listen at 0x1036782c0>
+    └ <source_listener.gmail.GmailSourceListener object at 0x10359e810>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 350, in listen
+    self.loop.run_until_complete(self.listen_incoming_messages())
+    │    │    │                  │    └ <function BaseSourceListener.listen_incoming_messages at 0x103678220>
+    │    │    │                  └ <source_listener.gmail.GmailSourceListener object at 0x10359e810>
+    │    │    └ <function BaseEventLoop.run_until_complete at 0x1013285e0>
+    │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+    └ <source_listener.gmail.GmailSourceListener object at 0x10359e810>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x101328540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x10132a340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x1012bac00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 335, in listen_incoming_messages
+    await self.get_incoming_messages()
+          │    └ <function BaseSourceListener.get_incoming_messages at 0x10364bf60>
+          └ <source_listener.gmail.GmailSourceListener object at 0x10359e810>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 253, in get_incoming_messages
+    messages = await self._get_incoming_messages()
+                     │    └ <function GmailSourceListener._get_incoming_messages at 0x10395ae80>
+                     └ <source_listener.gmail.GmailSourceListener object at 0x10359e810>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/gmail.py", line 203, in _get_incoming_messages
+    message = await self.handle_message(message_id, message_bytes)
+                    │    │              │           └ bytearray(b'Delivered-To: manager.innovacg@gmail.com\r\nReceived: by 2002:a54:2e41:0:b0:255:8b95:c7df with SMTP id i1csp14186...
+                    │    │              └ '366'
+                    │    └ <function GmailSourceListener.handle_message at 0x10372f100>
+                    └ <source_listener.gmail.GmailSourceListener object at 0x10359e810>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/gmail.py", line 141, in handle_message
+    return ListenerOutput(
+           └ <class 'source_listener.output.ListenerOutput'>
+
+TypeError: ListenerOutput.__init__() missing 1 required positional argument: 'id'
+2024-04-17T20:05:48.627596+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:05:48.628305+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:05:48.628449+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:05:48.856899+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:05:48.857368+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:05:48.857524+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:05:53.805560+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:05:53.806580+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:05:53.806702+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:05:53.909426+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:05:53.909747+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:05:53.909877+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:05:58.963099+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:05:58.963711+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:05:58.963826+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:05:59.001986+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:05:59.002464+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:05:59.002575+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:06:04.019004+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:06:04.019792+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:06:04.019976+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:06:04.189108+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:06:04.189430+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:06:04.189531+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:06:09.071140+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:06:09.071783+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:06:09.071907+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:06:09.407306+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:06:09.408600+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:06:09.408750+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:06:14.133641+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:06:14.134280+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:06:14.134542+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:06:14.603912+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:06:14.604185+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:06:14.604282+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:06:19.189106+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:06:19.189832+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:06:19.189940+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:06:19.778418+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:06:19.778681+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:06:19.778762+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:06:24.243414+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:06:24.243987+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:06:24.244111+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:06:24.986957+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:06:24.987217+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:06:24.987305+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:06:29.294694+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:06:29.295129+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:06:29.295223+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:06:30.182534+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:06:30.182984+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:06:30.183099+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:06:34.353308+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:06:34.354034+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:06:34.354212+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:06:35.357233+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:06:35.357582+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:06:35.357632+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:06:39.406940+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:06:39.407383+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:06:39.407493+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:06:40.539777+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:06:40.540097+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:06:40.540199+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:06:44.463848+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:06:44.464446+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:06:44.464624+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:06:45.763232+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:06:45.763693+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:06:45.763810+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:06:49.521631+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:06:49.522182+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:06:49.522343+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:06:50.945682+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:06:50.946185+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:06:50.946291+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:06:54.575726+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:06:54.576727+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:06:54.577128+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:06:56.133333+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:06:56.133759+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:06:56.133901+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:06:59.627408+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:06:59.627961+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:06:59.628072+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:07:01.349036+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:07:01.349249+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:07:01.349312+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:07:04.680957+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:07:04.681487+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:07:04.681594+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:07:06.531586+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:07:06.531985+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:07:06.532085+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:07:09.733470+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:07:09.733800+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:07:09.733902+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:07:11.857888+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:07:11.858192+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:07:11.858286+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:07:14.785764+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:07:14.786228+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:07:14.786345+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:07:17.030200+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:07:17.030818+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:07:17.030912+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:07:19.849878+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:07:19.850987+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:07:19.851191+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:07:22.202549+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:07:22.203022+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:07:22.203180+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:07:24.901114+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:07:24.901702+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:07:24.901851+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:07:27.390203+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:07:27.390739+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:07:27.390920+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:07:29.956763+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:07:29.957228+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:07:29.957341+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:07:32.588932+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:07:32.589156+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:07:32.589228+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:07:35.006043+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:07:35.006254+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:07:35.006319+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:07:37.784482+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:07:37.784987+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:07:37.785143+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:07:40.057760+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:07:40.058026+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:07:40.058112+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:07:42.978120+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:07:42.978475+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:07:42.978587+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:07:45.115169+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:07:45.115822+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:07:45.115979+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:07:48.150168+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:07:48.150424+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:07:48.150512+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:07:50.187033+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:07:50.187186+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:07:50.187223+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:07:53.327873+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:07:53.327995+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:07:53.328034+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:07:55.255491+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:07:55.255903+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:07:55.256035+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:07:58.500436+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:192 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:07:58.500562+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:07:58.500610+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:07:59.706195+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-04-17T20:08:00.017296+0300 | DEBUG | GmailSourceListener:listen:341 - Starting listeners
+2024-04-17T20:08:00.404475+0300 | INFO | GmailSourceListener:connect_imap:163 - Connected to imap
+2024-04-17T20:08:01.060146+0300 | INFO | GmailSourceListener:connect_smtp:177 - Connected to smtp
+2024-04-17T20:08:01.060337+0300 | INFO | GmailSourceListener:connect:84 - Connected to source
+2024-04-17T20:08:01.060462+0300 | DEBUG | GmailSourceListener:listen:345 - Started outcoming messages listener
+2024-04-17T20:08:01.060577+0300 | DEBUG | GmailSourceListener:listen:348 - Started incoming messages listener
+2024-04-17T20:08:01.109365+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:08:01.109581+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:08:01.109650+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:08:01.234670+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:08:01.235242+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:08:01.235556+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:08:06.167268+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:08:06.168207+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:08:06.168419+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:08:06.405267+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:08:06.405626+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:08:06.405790+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:08:11.229920+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:08:11.230258+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:08:11.230350+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:08:11.578879+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:08:11.579369+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:08:11.579634+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:08:16.281970+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:08:16.282646+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:08:16.282758+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:08:16.761805+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'367', b'SEARCH completed (Success)']
+2024-04-17T20:08:16.762282+0300 | INFO | GmailSourceListener:_get_incoming_messages:205 - Got new message -> 367
+2024-04-17T20:08:17.077658+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 1 incoming messages
+2024-04-17T20:08:17.078136+0300 | DEBUG | GmailSourceListener:_save_message:282 - Trying to add user -> {'id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'link': 'minka.denis@gmail.com', 'phone': '+380 (12) 321-31-23', 'firstname': 'denis', 'type': 'client', 'source': 'gmail'}
+2024-04-17T20:08:17.143662+0300 | INFO | GmailSourceListener:_save_message:286 - Got response from adding user -> {'status': 'err', 'description': 'Duplicate user', 'data': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b'}}
+2024-04-17T20:08:17.144000+0300 | DEBUG | GmailSourceListener:_save_message:294 - Trying to add dialog -> {'id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'participants': ['b88b4b7c6efb343c9306f8f1f5da407b', 'bot'], 'source': 'gmail'}
+2024-04-17T20:08:17.239585+0300 | INFO | GmailSourceListener:_save_message:298 - Got response from adding dialog -> {'status': 'err', 'description': 'Duplicate dialog', 'data': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b'}}
+2024-04-17T20:08:17.240013+0300 | DEBUG | GmailSourceListener:_save_message:315 - Trying to add message -> {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367', 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': 'https://crystal.tax/', 'subject': 'Crystal: Форма слайдера', 'status': 'received', 'text': 'Crystal: Форма слайдера', 'make_blank_reply': True}
+2024-04-17T20:08:17.456326+0300 | INFO | GmailSourceListener:_save_message:319 - Got response from adding message -> {'status': 'ok', 'description': 'ok', 'data': {'db': "InsertOneResult(ObjectId('66200201fa0062c23bc61754'), acknowledged=True)", 'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367', 'make_blank_reply': {'status': 'ok', 'description': 'ok', 'data': {'db': "InsertOneResult(ObjectId('66200201fa0062c23bc61755'), acknowledged=True)", 'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367_reply'}}}}
+2024-04-17T20:08:17.457106+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 1 incoming messages
+2024-04-17T20:08:21.338226+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:08:21.338786+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:08:21.339110+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:08:22.653983+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:08:22.654104+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:08:22.654140+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:08:26.392693+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:08:26.393552+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:08:26.393757+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:08:27.825269+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:08:27.825789+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:08:27.825961+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:08:31.446445+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:08:31.447239+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:08:31.447438+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:08:32.999739+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:08:33.000063+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:08:33.000170+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:08:36.501021+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:08:36.502963+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:08:36.503433+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:08:38.172559+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:08:38.172822+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:08:38.172906+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:08:41.555996+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': [{'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367_reply', 'reply_to_id': 'b88b4b7c6efb343c9306f8f1f5da407b_367', 'reviewer_id': None, 'reviewed': None, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'bot', 'source': 'gmail', 'source_link': 'https://crystal.tax/', 'subject': 'Crystal: Форма слайдера', 'status': 'waiting_for_send', 'text': '<p>It appears you are inquiring about a specific feature or service related to "Crystal: Форма слайдера" without providing detailed information. As we specialize in a wide array of services at Innova Consulting Group, including design and development solutions, I would kindly ask for more context or details regarding your request. Are you looking for design services for a slider form, web development assistance, or perhaps consulting on how to implement this feature effectively into your business or website? Your clarification will greatly assist in providing you with the most accurate and helpful response.</p>\n<p>Best regards,\nOleg Shevchenko</p>'}]}
+2024-04-17T20:08:41.612810+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:109 - Got update_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bc'), 'opTime': {'ts': Timestamp(1713373721, 23), 't': 188}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1713373721, 23), 'signature': {'hash': b'P)\\xac\\xc6\\x1f@Z\\x13l\\xb1\\xa9\\x1c\\xb5\\x7f\\xc0\\xb0A\\xb4\\x1a\\x81', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1713373721, 23), 'updatedExisting': True}, acknowledged=True)"}
+2024-04-17T20:08:41.660867+0300 | DEBUG | GmailSourceListener:send_message:143 - Got dialog_response -> {'status': 'ok', 'description': 'ok', 'dialog': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'participants': ['b88b4b7c6efb343c9306f8f1f5da407b', 'bot'], 'gpt_face': {'firstname': 'Oleg', 'lastname': 'Shevchenko', 'sex': 'male', 'age': '35'}}}
+2024-04-17T20:08:41.660996+0300 | DEBUG | GmailSourceListener:send_message:149 - Trying to get ask_message -> b88b4b7c6efb343c9306f8f1f5da407b_367
+2024-04-17T20:08:41.708707+0300 | DEBUG | GmailSourceListener:send_message:153 - Got ask_message response -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': None, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': 'https://crystal.tax/', 'subject': 'Crystal: Форма слайдера', 'status': 'received', 'text': 'Crystal: Форма слайдера'}}
+2024-04-17T20:08:41.756391+0300 | DEBUG | GmailSourceListener:find_recipient:49 - Got user_response -> {'status': 'ok', 'description': 'ok', 'user': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'type': 'client', 'link': 'minka.denis@gmail.com', 'source': 'gmail', 'firstname': 'den', 'phone': '+38 (099) 449-32-85'}}
+2024-04-17T20:08:41.809503+0300 | DEBUG | GmailSourceListener:send_message:211 - Got update_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bc'), 'opTime': {'ts': Timestamp(1713373721, 30), 't': 188}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1713373721, 30), 'signature': {'hash': b'P)\\xac\\xc6\\x1f@Z\\x13l\\xb1\\xa9\\x1c\\xb5\\x7f\\xc0\\xb0A\\xb4\\x1a\\x81', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1713373721, 30), 'updatedExisting': True}, acknowledged=True)"}
+2024-04-17T20:08:41.809633+0300 | INFO | GmailSourceListener:send_message:212 - Sent message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply) -> Client(id=b88b4b7c6efb343c9306f8f1f5da407b)
+2024-04-17T20:08:41.856521+0300 | INFO | GmailSourceListener:get_reviewers:60 - Got response from config -> {'status': 'ok', 'description': 'ok', 'data': {'faces': [{'firstname': 'Oleg', 'lastname': 'Shevchenko', 'sex': 'male', 'age': '35'}], 'payments': [{'name': 'monobank', 'keys': 'моно, монобанк, mono, monobank', 'card_number': '1111 1111 1111 1111', 'cardholder_name': 'Mono Jack', 'value': 'hryvnia'}, {'name': 'privatbank', 'keys': 'приват, приватбанк, privat, privatbank', 'card_number': '2222 2222 2222 2222', 'cardholder_name': 'Privat Jack', 'value': 'hryvnia'}], 'reviewers': [{'link': 'thedenisminka@gmail.com', 'id': 'cbb304c03af63cb0a3beda3518389694', 'source': 'gmail'}, {'link': 'ctmakc@gmail.com', 'id': '551d9d36e7eb364f8a4a492e3d50193f', 'source': 'gmail'}, {'link': 'vblacksquare', 'id': '885554630', 'source': 'telegram'}, {'link': 'msconsult', 'id': '172396465', 'source': 'telegram'}], 'assistants': {'manager': 'asst_cQzJEk99zoDwdJWNahXs9bOd', 'reviewer': 'asst_UPdcibzGPGPfk1UHzBHGxV7b'}, 'id': 'main'}}
+2024-04-17T20:08:41.907161+0300 | INFO | GmailSourceListener:get_reviewers:69 - Got users_response -> {'status': 'ok', 'description': 'ok', 'data': [{'id': 'cbb304c03af63cb0a3beda3518389694', 'type': 'reviewer', 'link': 'thedenisminka@gmail.com', 'source': 'gmail', 'firstname': None, 'phone': None}, {'id': '551d9d36e7eb364f8a4a492e3d50193f', 'type': 'reviewer', 'link': 'ctmakc@gmail.com', 'source': 'gmail', 'firstname': None, 'phone': None}, {'id': '885554630', 'type': 'reviewer', 'link': 'vblacksquare', 'source': 'telegram', 'firstname': None, 'phone': None}, {'id': '172396465', 'type': 'reviewer', 'link': 'msconsult', 'source': 'telegram', 'firstname': None, 'phone': None}]}
+2024-04-17T20:08:41.907396+0300 | DEBUG | GmailSourceListener:send_message:228 - Trying to add for_review message -> {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367_reply_cbb304c03af63cb0a3beda3518389694_forreview', 'reply_to_id': 'b88b4b7c6efb343c9306f8f1f5da407b_367', 'reviewer_id': 'cbb304c03af63cb0a3beda3518389694', 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'bot', 'source': 'gmail', 'source_link': 'https://crystal.tax/', 'subject': 'Crystal: Форма слайдера', 'status': 'waiting_for_send', 'text': '<p>It appears you are inquiring about a specific feature or service related to "Crystal: Форма слайдера" without providing detailed information. As we specialize in a wide array of services at Innova Consulting Group, including design and development solutions, I would kindly ask for more context or details regarding your request. Are you looking for design services for a slider form, web development assistance, or perhaps consulting on how to implement this feature effectively into your business or website? Your clarification will greatly assist in providing you with the most accurate and helpful response.</p>\n<p>Best regards,\nOleg Shevchenko</p>'}
+2024-04-17T20:08:42.025957+0300 | INFO | GmailSourceListener:send_message:232 - Got response from adding for_review message -> {'status': 'ok', 'description': 'ok', 'data': {'db': "InsertOneResult(ObjectId('66200219fa0062c23bc61756'), acknowledged=True)", 'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367_reply_cbb304c03af63cb0a3beda3518389694_forreview', 'make_blank_reply': None}}
+2024-04-17T20:08:42.026394+0300 | DEBUG | GmailSourceListener:send_message:228 - Trying to add for_review message -> {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367_reply_551d9d36e7eb364f8a4a492e3d50193f_forreview', 'reply_to_id': 'b88b4b7c6efb343c9306f8f1f5da407b_367', 'reviewer_id': '551d9d36e7eb364f8a4a492e3d50193f', 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'bot', 'source': 'gmail', 'source_link': 'https://crystal.tax/', 'subject': 'Crystal: Форма слайдера', 'status': 'waiting_for_send', 'text': '<p>It appears you are inquiring about a specific feature or service related to "Crystal: Форма слайдера" without providing detailed information. As we specialize in a wide array of services at Innova Consulting Group, including design and development solutions, I would kindly ask for more context or details regarding your request. Are you looking for design services for a slider form, web development assistance, or perhaps consulting on how to implement this feature effectively into your business or website? Your clarification will greatly assist in providing you with the most accurate and helpful response.</p>\n<p>Best regards,\nOleg Shevchenko</p>'}
+2024-04-17T20:08:42.127530+0300 | INFO | GmailSourceListener:send_message:232 - Got response from adding for_review message -> {'status': 'ok', 'description': 'ok', 'data': {'db': "InsertOneResult(ObjectId('6620021afa0062c23bc61757'), acknowledged=True)", 'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367_reply_551d9d36e7eb364f8a4a492e3d50193f_forreview', 'make_blank_reply': None}}
+2024-04-17T20:08:42.128255+0300 | DEBUG | GmailSourceListener:send_message:228 - Trying to add for_review message -> {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367_reply_885554630_forreview', 'reply_to_id': 'b88b4b7c6efb343c9306f8f1f5da407b_367', 'reviewer_id': '885554630', 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'bot', 'source': 'telegram', 'source_link': 'https://crystal.tax/', 'subject': 'Crystal: Форма слайдера', 'status': 'waiting_for_send', 'text': '<p>It appears you are inquiring about a specific feature or service related to "Crystal: Форма слайдера" without providing detailed information. As we specialize in a wide array of services at Innova Consulting Group, including design and development solutions, I would kindly ask for more context or details regarding your request. Are you looking for design services for a slider form, web development assistance, or perhaps consulting on how to implement this feature effectively into your business or website? Your clarification will greatly assist in providing you with the most accurate and helpful response.</p>\n<p>Best regards,\nOleg Shevchenko</p>'}
+2024-04-17T20:08:42.230155+0300 | INFO | GmailSourceListener:send_message:232 - Got response from adding for_review message -> {'status': 'ok', 'description': 'ok', 'data': {'db': "InsertOneResult(ObjectId('6620021afa0062c23bc61758'), acknowledged=True)", 'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367_reply_885554630_forreview', 'make_blank_reply': None}}
+2024-04-17T20:08:42.230595+0300 | DEBUG | GmailSourceListener:send_message:228 - Trying to add for_review message -> {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367_reply_172396465_forreview', 'reply_to_id': 'b88b4b7c6efb343c9306f8f1f5da407b_367', 'reviewer_id': '172396465', 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'bot', 'source': 'telegram', 'source_link': 'https://crystal.tax/', 'subject': 'Crystal: Форма слайдера', 'status': 'waiting_for_send', 'text': '<p>It appears you are inquiring about a specific feature or service related to "Crystal: Форма слайдера" without providing detailed information. As we specialize in a wide array of services at Innova Consulting Group, including design and development solutions, I would kindly ask for more context or details regarding your request. Are you looking for design services for a slider form, web development assistance, or perhaps consulting on how to implement this feature effectively into your business or website? Your clarification will greatly assist in providing you with the most accurate and helpful response.</p>\n<p>Best regards,\nOleg Shevchenko</p>'}
+2024-04-17T20:08:42.346237+0300 | INFO | GmailSourceListener:send_message:232 - Got response from adding for_review message -> {'status': 'ok', 'description': 'ok', 'data': {'db': "InsertOneResult(ObjectId('6620021afa0062c23bc61759'), acknowledged=True)", 'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367_reply_172396465_forreview', 'make_blank_reply': None}}
+2024-04-17T20:08:42.347011+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 1 outcoming messages
+2024-04-17T20:08:42.347136+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 1 outcoming messages
+2024-04-17T20:08:43.354923+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:08:43.355171+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:08:43.355261+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:08:47.402351+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': [{'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367_reply_cbb304c03af63cb0a3beda3518389694_forreview', 'reply_to_id': 'b88b4b7c6efb343c9306f8f1f5da407b_367', 'reviewer_id': 'cbb304c03af63cb0a3beda3518389694', 'reviewed': None, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'bot', 'source': 'gmail', 'source_link': 'https://crystal.tax/', 'subject': 'Crystal: Форма слайдера', 'status': 'waiting_for_send', 'text': '<p>It appears you are inquiring about a specific feature or service related to "Crystal: Форма слайдера" without providing detailed information. As we specialize in a wide array of services at Innova Consulting Group, including design and development solutions, I would kindly ask for more context or details regarding your request. Are you looking for design services for a slider form, web development assistance, or perhaps consulting on how to implement this feature effectively into your business or website? Your clarification will greatly assist in providing you with the most accurate and helpful response.</p>\n<p>Best regards,\nOleg Shevchenko</p>'}, {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367_reply_551d9d36e7eb364f8a4a492e3d50193f_forreview', 'reply_to_id': 'b88b4b7c6efb343c9306f8f1f5da407b_367', 'reviewer_id': '551d9d36e7eb364f8a4a492e3d50193f', 'reviewed': None, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'bot', 'source': 'gmail', 'source_link': 'https://crystal.tax/', 'subject': 'Crystal: Форма слайдера', 'status': 'waiting_for_send', 'text': '<p>It appears you are inquiring about a specific feature or service related to "Crystal: Форма слайдера" without providing detailed information. As we specialize in a wide array of services at Innova Consulting Group, including design and development solutions, I would kindly ask for more context or details regarding your request. Are you looking for design services for a slider form, web development assistance, or perhaps consulting on how to implement this feature effectively into your business or website? Your clarification will greatly assist in providing you with the most accurate and helpful response.</p>\n<p>Best regards,\nOleg Shevchenko</p>'}]}
+2024-04-17T20:08:47.464695+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:109 - Got update_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bc'), 'opTime': {'ts': Timestamp(1713373727, 23), 't': 188}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1713373727, 23), 'signature': {'hash': b'\\xab\\xbe\\xc2C\\x12\\xbb\\xe85\\xea~r\\t\\xef\\x1a)A\\x14$G\\xef', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1713373727, 23), 'updatedExisting': True}, acknowledged=True)"}
+2024-04-17T20:08:47.513653+0300 | DEBUG | GmailSourceListener:send_message:143 - Got dialog_response -> {'status': 'ok', 'description': 'ok', 'dialog': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'participants': ['b88b4b7c6efb343c9306f8f1f5da407b', 'bot'], 'gpt_face': {'firstname': 'Oleg', 'lastname': 'Shevchenko', 'sex': 'male', 'age': '35'}}}
+2024-04-17T20:08:47.513955+0300 | DEBUG | GmailSourceListener:send_message:149 - Trying to get ask_message -> b88b4b7c6efb343c9306f8f1f5da407b_367
+2024-04-17T20:08:47.562590+0300 | DEBUG | GmailSourceListener:send_message:153 - Got ask_message response -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': None, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': 'https://crystal.tax/', 'subject': 'Crystal: Форма слайдера', 'status': 'received', 'text': 'Crystal: Форма слайдера'}}
+2024-04-17T20:08:47.613055+0300 | DEBUG | GmailSourceListener:find_recipient:49 - Got user_response -> {'status': 'ok', 'description': 'ok', 'user': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'type': 'client', 'link': 'minka.denis@gmail.com', 'source': 'gmail', 'firstname': 'den', 'phone': '+38 (099) 449-32-85'}}
+2024-04-17T20:08:47.613282+0300 | DEBUG | GmailSourceListener:send_message:161 - Trying to get reviewer -> cbb304c03af63cb0a3beda3518389694
+2024-04-17T20:08:47.660529+0300 | DEBUG | GmailSourceListener:send_message:165 - Got reviewer response -> {'status': 'ok', 'description': 'ok', 'user': {'id': 'cbb304c03af63cb0a3beda3518389694', 'type': 'reviewer', 'link': 'thedenisminka@gmail.com', 'source': 'gmail', 'firstname': None, 'phone': None}}
+2024-04-17T20:08:48.170375+0300 | DEBUG | GmailSourceListener:send_message:211 - Got update_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bc'), 'opTime': {'ts': Timestamp(1713373728, 4), 't': 188}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1713373728, 4), 'signature': {'hash': b'\\x98\\xb0f\\xd5\\x01\\xcf\\xe3\\x1a\\x81\\xd2\\xf1\\x964\\x07\\xdbw\\xbc\\x80(\\x04', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1713373728, 4), 'updatedExisting': True}, acknowledged=True)"}
+2024-04-17T20:08:48.170988+0300 | INFO | GmailSourceListener:send_message:212 - Sent message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply_cbb304c03af63cb0a3beda3518389694_forreview) -> Client(id=b88b4b7c6efb343c9306f8f1f5da407b)
+2024-04-17T20:08:48.226354+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:109 - Got update_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bc'), 'opTime': {'ts': Timestamp(1713373728, 9), 't': 188}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1713373728, 9), 'signature': {'hash': b'\\x98\\xb0f\\xd5\\x01\\xcf\\xe3\\x1a\\x81\\xd2\\xf1\\x964\\x07\\xdbw\\xbc\\x80(\\x04', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1713373728, 9), 'updatedExisting': True}, acknowledged=True)"}
+2024-04-17T20:08:48.277585+0300 | DEBUG | GmailSourceListener:send_message:143 - Got dialog_response -> {'status': 'ok', 'description': 'ok', 'dialog': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'participants': ['b88b4b7c6efb343c9306f8f1f5da407b', 'bot'], 'gpt_face': {'firstname': 'Oleg', 'lastname': 'Shevchenko', 'sex': 'male', 'age': '35'}}}
+2024-04-17T20:08:48.277986+0300 | DEBUG | GmailSourceListener:send_message:149 - Trying to get ask_message -> b88b4b7c6efb343c9306f8f1f5da407b_367
+2024-04-17T20:08:48.328595+0300 | DEBUG | GmailSourceListener:send_message:153 - Got ask_message response -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_367', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': None, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': 'https://crystal.tax/', 'subject': 'Crystal: Форма слайдера', 'status': 'received', 'text': 'Crystal: Форма слайдера'}}
+2024-04-17T20:08:48.379160+0300 | DEBUG | GmailSourceListener:find_recipient:49 - Got user_response -> {'status': 'ok', 'description': 'ok', 'user': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'type': 'client', 'link': 'minka.denis@gmail.com', 'source': 'gmail', 'firstname': 'den', 'phone': '+38 (099) 449-32-85'}}
+2024-04-17T20:08:48.379568+0300 | DEBUG | GmailSourceListener:send_message:161 - Trying to get reviewer -> 551d9d36e7eb364f8a4a492e3d50193f
+2024-04-17T20:08:48.431234+0300 | DEBUG | GmailSourceListener:send_message:165 - Got reviewer response -> {'status': 'ok', 'description': 'ok', 'user': {'id': '551d9d36e7eb364f8a4a492e3d50193f', 'type': 'reviewer', 'link': 'ctmakc@gmail.com', 'source': 'gmail', 'firstname': None, 'phone': None}}
+2024-04-17T20:08:48.540500+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:08:48.541003+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:08:48.541138+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:08:49.482280+0300 | DEBUG | GmailSourceListener:send_message:211 - Got update_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bc'), 'opTime': {'ts': Timestamp(1713373729, 18), 't': 188}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1713373729, 18), 'signature': {'hash': b'OS\\xe4\\x1f\\xfcA\\xb5>o5\\xa7\\x98{\\xbbH3?\\xdcC\\x06', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1713373729, 18), 'updatedExisting': True}, acknowledged=True)"}
+2024-04-17T20:08:49.482509+0300 | INFO | GmailSourceListener:send_message:212 - Sent message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply_551d9d36e7eb364f8a4a492e3d50193f_forreview) -> Client(id=b88b4b7c6efb343c9306f8f1f5da407b)
+2024-04-17T20:08:49.482721+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 2 outcoming messages
+2024-04-17T20:08:49.482803+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 2 outcoming messages
+2024-04-17T20:08:53.720567+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:08:53.721238+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:08:53.721343+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:08:54.548315+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:08:54.548830+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:08:54.549001+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:08:58.904557+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:08:58.904830+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:08:58.904931+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:08:59.604305+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:08:59.604754+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:08:59.604898+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:09:04.098521+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:09:04.099324+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:09:04.099452+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:09:04.658557+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:09:04.659009+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:09:04.659119+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:09:09.274757+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:09:09.275174+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:09:09.275305+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:09:09.709431+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:09:09.709717+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:09:09.709806+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages
+2024-04-17T20:09:14.461660+0300 | DEBUG | GmailSourceListener:_get_incoming_messages:197 - Got data from imap -> [b'', b'SEARCH completed (Success)']
+2024-04-17T20:09:14.462080+0300 | DEBUG | GmailSourceListener:get_incoming_messages:254 - Got 0 incoming messages
+2024-04-17T20:09:14.462184+0300 | DEBUG | GmailSourceListener:get_incoming_messages:265 - Processed 0 incoming messages
+2024-04-17T20:09:14.760882+0300 | DEBUG | GmailSourceListener:_get_outcoming_messages:99 - Got messages_response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-04-17T20:09:14.761217+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:119 - Got 0 outcoming messages
+2024-04-17T20:09:14.761316+0300 | DEBUG | GmailSourceListener:get_outcoming_messages:126 - Processed 0 outcoming messages

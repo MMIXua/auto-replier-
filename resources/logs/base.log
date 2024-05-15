@@ -1,0 +1,10 @@
+2024-05-15T15:06:26.074886+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-15T15:06:26.221929+0300 | INFO | Db:connect:38 - Connected to db
+2024-05-15T15:07:34.790070+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-15T15:07:34.930874+0300 | INFO | Db:connect:38 - Connected to db
+2024-05-15T15:08:08.392006+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-15T15:08:08.431709+0300 | INFO | Db:connect:38 - Connected to db
+2024-05-15T15:08:45.401650+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-15T15:08:45.524222+0300 | INFO | Db:connect:38 - Connected to db
+2024-05-15T15:09:21.792968+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-15T15:09:21.825584+0300 | INFO | Db:connect:38 - Connected to db

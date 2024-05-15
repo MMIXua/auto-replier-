@@ -1,0 +1,307 @@
+[
+      {
+        "name": "registration of LLC, SP",
+        "price": "100",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of charitable organization",
+        "price": "200",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of public organization",
+        "price": "200",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of media",
+        "price": "200",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of branches and representations",
+        "price": "50",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of companies with foreign investments",
+        "price": "200",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of individual entrepreneur",
+        "price": "50",
+        "value": "EUR"
+      },
+      {
+        "name": "registration as VAT payer",
+        "price": "30",
+        "value": "EUR"
+      },
+      {
+        "name": "registration as single tax payer",
+        "price": "30",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of cash register (Fiscal Register)",
+        "price": "50",
+        "value": "EUR"
+      },
+      {
+        "name": "change of company director",
+        "price": "100",
+        "value": "EUR"
+      },
+      {
+        "name": "change of types of activities (KVED)",
+        "price": "100",
+        "value": "EUR"
+      },
+      {
+        "name": "change of company location",
+        "price": "100",
+        "value": "EUR"
+      },
+      {
+        "name": "change of company name",
+        "price": "100",
+        "value": "EUR"
+      },
+      {
+        "name": "change of founders/participants of the company",
+        "price": "100",
+        "value": "EUR"
+      },
+      {
+        "name": "provision of legal address in Kyiv and throughout Ukraine",
+        "price": "200",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of foreign representation",
+        "price": "500",
+        "value": "EUR"
+      },
+      {
+        "name": "electronic/remote registration of individual entrepreneur throughout Ukraine",
+        "price": "50",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of SP",
+        "price": "100",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of joint-stock company (PJSC, JSC). National Securities and Stock Market Commission (300)",
+        "price": "500-2000",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of shares issue of JSC, share issue (41)",
+        "price": "500",
+        "value": "EUR"
+      },
+      {
+        "name": "Registration of HOA",
+        "price": "300",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of financial company, financial institutions (44)",
+        "price": "3000-7000",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of insurance company (1083)",
+        "price": "455",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of credit union, organization and cooperative (1089)",
+        "price": "61",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of leasing company (1091)",
+        "price": "91-212",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of information agency (50)",
+        "price": "6",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of school (47)",
+        "price": "30>?",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of full company (51)",
+        "price": "6",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of limited partnership (LP) (301)",
+        "price": "???",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of additional liability company (ALC) (53)",
+        "price": "???",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of disabled persons' society (54)",
+        "price": "303",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of state enterprise (60)",
+        "price": "6",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of farm (59)",
+        "price": "8",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of representation of foreign fund (78)",
+        "price": "45",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of religious organization (81)",
+        "price": "30>?",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of condominium (83)",
+        "price": "???",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of trade union, trade union organization (84)",
+        "price": "303",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of youth organization (85)",
+        "price": "152",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of employers' organization (86)",
+        "price": "303",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of associations of enterprises (80)",
+        "price": "9",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of associations of trade unions (87)",
+        "price": "364",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of political party (310)",
+        "price": "30>?",
+        "value": "EUR"
+      },
+      {
+        "name": "registration of changes in non-profit organizations (88)",
+        "price": "3",
+        "value": "EUR"
+      },
+      {
+        "name": "changes in governing body of organization (89)",
+        "price": "3",
+        "value": "EUR"
+      },
+      {
+        "name": "change of types of activities of organization (90)",
+        "price": "3",
+        "value": "EUR"
+      },
+      {
+        "name": "change of organization name (92)",
+        "price": "3",
+        "value": "EUR"
+      },
+      {
+        "name": "change of legal address of organization (91)",
+        "price": "3",
+        "value": "EUR"
+      },
+      {
+        "name": "change in statutory documents of organization (93)",
+        "price": "3",
+        "value": "EUR"
+      },
+      {
+        "name": "change of founders of organization (94)",
+        "price": "3",
+        "value": "EUR"
+      },
+      {
+        "name": "Regulation (50)",
+        "price": "2",
+        "value": "EUR"
+      },
+      {
+        "name": "extract from the Unified State Register (250)",
+        "price": "8",
+        "value": "EUR"
+      },
+      {
+        "name": "extract from the Unified State Register (500)",
+        "price": "15",
+        "value": "EUR"
+      },
+      {
+        "name": "information from the Unified State Register of Legal Entities, Individual Entrepreneurs and Public Organizations (400)",
+        "price": "12",
+        "value": "EUR"
+      },
+      {
+        "name": "certificate of no corruption (5 business days) (power of attorney) (500)",
+        "price": "15",
+        "value": "EUR"
+      },
+      {
+        "name": "certificate of no criminal record (600)",
+        "price": "18",
+        "value": "EUR"
+      },
+      {
+        "name": "certificate of no debts to the budget (for 5 business days / for 1 business day) (power of attorney) (1200/5600)",
+        "price": "36/170",
+        "value": "EUR"
+      },
+      {
+        "name": "certificate of absence of infectious diseases (2500)",
+        "price": "76",
+        "value": "EUR"
+      },
+      {
+        "name": "certificate of tax resident status (power of attorney) (800)",
+        "price": "24",
+        "value": "EUR"
+      },
+      {
+        "name": "certificate from real estate register (1076)",
+        "price": "30",
+        "value": "EUR"
+      },
+      {
+        "name": "stamp with logo (600)",
+        "price": "18",
+        "value": "EUR"
+      }
+    ]

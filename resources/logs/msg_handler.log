@@ -1,0 +1,822 @@
+2024-05-10T21:11:27.413971+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-10T21:11:27.518828+0300 | INFO | Db:connect:38 - Connected to db
+2024-05-10T21:13:04.582240+0300 | DEBUG | MessageHandler:listen_blank_messages:175 - Got 1 blank messages
+2024-05-10T21:13:04.583506+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x108bd7a90>
+2024-05-10T21:13:31.584083+0300 | DEBUG | MessageHandler:fill_blank_message:53 - Generating step: Message(id=b88b4b7c6efb343c9306f8f1f5da407b_647_reply) -> steps
+2024-05-10T21:13:31.584336+0300 | DEBUG | MessageHandler:fill_blank_message:53 - Generating step: Message(id=b88b4b7c6efb343c9306f8f1f5da407b_647_reply) -> result
+2024-05-10T21:13:31.665450+0300 | DEBUG | MessageHandler:fill_blank_message:61 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': 'UpdateResult({\'n\': 1, \'electionId\': ObjectId(\'7fffffff00000000000000c0\'), \'opTime\': {\'ts\': Timestamp(1715364811, 21), \'t\': 192}, \'nModified\': 1, \'ok\': 1.0, \'$clusterTime\': {\'clusterTime\': Timestamp(1715364811, 21), \'signature\': {\'hash\': b\'\\xe5\\xf2\\xe3/\\xbc\\x84+{I5\\x1f`\\xde=\\xb0\\xa1\\xe2\\xcf"\\t\', \'keyId\': 7306544719813672961}}, \'operationTime\': Timestamp(1715364811, 21), \'updatedExisting\': True}, acknowledged=True)'}
+2024-05-10T21:13:36.981378+0300 | DEBUG | MessageHandler:listen_blank_messages:175 - Got 1 blank messages
+2024-05-10T21:13:36.981816+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x108bf41d0>
+2024-05-10T21:14:10.482214+0300 | DEBUG | MessageHandler:fill_blank_message:53 - Generating step: Message(id=b88b4b7c6efb343c9306f8f1f5da407b_647_reply) -> steps
+2024-05-10T21:14:10.483998+0300 | DEBUG | MessageHandler:fill_blank_message:53 - Generating step: Message(id=b88b4b7c6efb343c9306f8f1f5da407b_647_reply) -> result
+2024-05-10T21:14:10.561617+0300 | DEBUG | MessageHandler:fill_blank_message:61 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000c0'), 'opTime': {'ts': Timestamp(1715364850, 267), 't': 192}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1715364850, 267), 'signature': {'hash': b'zN_\\xaf\\xab35\\x1a\\xdd\\xf9,\\xf2E\\xf5\\x9al\\x893\\x84\\xda', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1715364850, 267), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-10T21:14:15.626852+0300 | DEBUG | MessageHandler:listen_blank_messages:175 - Got 1 blank messages
+2024-05-10T21:14:15.627669+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x108bec210>
+2024-05-10T21:15:12.590790+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-10T21:15:12.697083+0300 | INFO | Db:connect:38 - Connected to db
+2024-05-10T21:15:12.990408+0300 | DEBUG | MessageHandler:listen_blank_messages:176 - Got 1 blank messages
+2024-05-10T21:15:12.990578+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x104b08650>
+2024-05-10T21:15:39.770092+0300 | DEBUG | MessageHandler:fill_blank_message:53 - Generating step: Message(id=b88b4b7c6efb343c9306f8f1f5da407b_647_reply) -> {'status': 'ok', 'description': 'ok', 'data': {'step': 'cleaner', 'result': 'hello'}, 'fields': ['status', 'description', 'data']}
+2024-05-10T21:15:39.772119+0300 | DEBUG | MessageHandler:fill_blank_message:53 - Generating step: Message(id=b88b4b7c6efb343c9306f8f1f5da407b_647_reply) -> {'status': 'ok', 'description': 'ok', 'data': {'step': 'manager', 'result': 'Здрастуйте! Які питання у вас виникли? Я тут, щоб допомогти вам.'}, 'fields': ['status', 'description', 'data']}
+2024-05-10T21:15:39.776840+0300 | DEBUG | MessageHandler:fill_blank_message:53 - Generating step: Message(id=b88b4b7c6efb343c9306f8f1f5da407b_647_reply) -> {'status': 'ok', 'description': 'ok', 'data': {'step': 'reviewer', 'result': 'Здрастуйте! Які питання у вас виникли? Я тут, щоб допомогти вам.'}, 'fields': ['status', 'description', 'data']}
+2024-05-10T21:15:39.871156+0300 | DEBUG | MessageHandler:fill_blank_message:62 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000c0'), 'opTime': {'ts': Timestamp(1715364939, 24), 't': 192}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1715364939, 24), 'signature': {'hash': b'\\x13\\xae\\x0b_4\\xd1\\xcf6J~\\xbe(\\xfe\\x11\\x11\\t\\xb9\\x91\\x1b\\xdc', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1715364939, 24), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-10T21:21:22.402645+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-10T21:21:22.546389+0300 | INFO | Db:connect:38 - Connected to db
+2024-05-10T21:21:53.295529+0300 | DEBUG | MessageHandler:listen_blank_messages:190 - Got 1 blank messages
+2024-05-10T21:21:53.298404+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x1084c04d0>
+2024-05-10T21:21:53.298961+0300 | DEBUG | MessageHandler:fill_blank_message:45 - Trying to get ask message -> b88b4b7c6efb343c9306f8f1f5da407b_648
+2024-05-10T21:21:53.372805+0300 | DEBUG | MessageHandler:fill_blank_message:48 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_648', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1715365311, 'text': 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}}
+2024-05-10T21:22:20.810656+0300 | ERROR | MessageHandler:fill_blank_message:80 - 'result'
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1040d45e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x104592ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x104162710>
+         │    └ <function MultiCommand.invoke at 0x104593ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1041625d0>
+           │               │       │       └ <function Command.invoke at 0x104593880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1041625d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x106ad3b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1041625d0>
+           │   │      │    └ <function run_handler at 0x10459fa60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x104592200>
+           └ <click.core.Context object at 0x1041625d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x1084aff60>
+    └ <message_handler.MessageHandler object at 0x106aeb090>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 203, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x1084afec0>
+    │    │                  └ <message_handler.MessageHandler object at 0x106aeb090>
+    │    └ <function BaseEventLoop.run_until_complete at 0x1048785e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x104878540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x10487a340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x10480ac00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 59, in fill_blank_message
+    if cleaner_step["result"]:
+       └ {'status': 'ok', 'description': 'ok', 'data': {'step': 'cleaner', 'result': 'hello'}, 'fields': ['status', 'description', 'da...
+
+KeyError: 'result'
+2024-05-10T21:22:25.891908+0300 | DEBUG | MessageHandler:listen_blank_messages:190 - Got 1 blank messages
+2024-05-10T21:22:25.892407+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x1084c0090>
+2024-05-10T21:22:25.892641+0300 | DEBUG | MessageHandler:fill_blank_message:45 - Trying to get ask message -> b88b4b7c6efb343c9306f8f1f5da407b_648
+2024-05-10T21:22:25.950398+0300 | DEBUG | MessageHandler:fill_blank_message:48 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_648', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1715365311, 'text': 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}}
+2024-05-10T21:22:51.848838+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-10T21:22:52.069581+0300 | INFO | Db:connect:38 - Connected to db
+2024-05-10T21:22:52.384699+0300 | DEBUG | MessageHandler:listen_blank_messages:190 - Got 1 blank messages
+2024-05-10T21:22:52.384913+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x1113009d0>
+2024-05-10T21:22:52.384998+0300 | DEBUG | MessageHandler:fill_blank_message:45 - Trying to get ask message -> b88b4b7c6efb343c9306f8f1f5da407b_648
+2024-05-10T21:22:52.437580+0300 | DEBUG | MessageHandler:fill_blank_message:48 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_648', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1715365311, 'text': 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}}
+2024-05-10T21:23:22.831028+0300 | ERROR | MessageHandler:fill_blank_message:80 - 'result'
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1048ac5e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x104d6aca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10493a710>
+         │    └ <function MultiCommand.invoke at 0x104d6bec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x10493a5d0>
+           │               │       │       └ <function Command.invoke at 0x104d6b880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x10493a5d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x1072abb00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x10493a5d0>
+           │   │      │    └ <function run_handler at 0x104d77a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x104d6a200>
+           └ <click.core.Context object at 0x10493a5d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x1112eff60>
+    └ <message_handler.MessageHandler object at 0x1072c3090>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 203, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x1112efec0>
+    │    │                  └ <message_handler.MessageHandler object at 0x1072c3090>
+    │    └ <function BaseEventLoop.run_until_complete at 0x1050505e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x105050540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x105052340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x104fe2c00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    ask_message.text = cleaner_step["result"]
+    │           │      └ {'status': 'ok', 'description': 'ok', 'data': {'step': 'cleaner', 'result': 'hello'}, 'fields': ['status', 'description', 'da...
+    │           └ 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'
+    └ <dtypes.message.Message object at 0x111302910>
+
+KeyError: 'result'
+2024-05-10T21:23:27.904980+0300 | DEBUG | MessageHandler:listen_blank_messages:190 - Got 1 blank messages
+2024-05-10T21:23:27.905870+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x111302310>
+2024-05-10T21:23:27.906606+0300 | DEBUG | MessageHandler:fill_blank_message:45 - Trying to get ask message -> b88b4b7c6efb343c9306f8f1f5da407b_648
+2024-05-10T21:23:27.965454+0300 | DEBUG | MessageHandler:fill_blank_message:48 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_648', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1715365311, 'text': 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}}
+2024-05-10T21:23:58.483328+0300 | ERROR | MessageHandler:fill_blank_message:80 - 'result'
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1048ac5e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x104d6aca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10493a710>
+         │    └ <function MultiCommand.invoke at 0x104d6bec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x10493a5d0>
+           │               │       │       └ <function Command.invoke at 0x104d6b880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x10493a5d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x1072abb00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x10493a5d0>
+           │   │      │    └ <function run_handler at 0x104d77a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x104d6a200>
+           └ <click.core.Context object at 0x10493a5d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x1112eff60>
+    └ <message_handler.MessageHandler object at 0x1072c3090>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 203, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x1112efec0>
+    │    │                  └ <message_handler.MessageHandler object at 0x1072c3090>
+    │    └ <function BaseEventLoop.run_until_complete at 0x1050505e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x105050540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x105052340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x104fe2c00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    ask_message.text = cleaner_step["result"]
+    │           │      └ {'status': 'ok', 'description': 'ok', 'data': {'step': 'cleaner', 'result': 'hello'}, 'fields': ['status', 'description', 'da...
+    │           └ 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'
+    └ <dtypes.message.Message object at 0x111309650>
+
+KeyError: 'result'
+2024-05-10T21:24:03.576528+0300 | DEBUG | MessageHandler:listen_blank_messages:190 - Got 1 blank messages
+2024-05-10T21:24:03.577592+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x111354c10>
+2024-05-10T21:24:03.578154+0300 | DEBUG | MessageHandler:fill_blank_message:45 - Trying to get ask message -> b88b4b7c6efb343c9306f8f1f5da407b_648
+2024-05-10T21:24:03.636697+0300 | DEBUG | MessageHandler:fill_blank_message:48 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_648', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1715365311, 'text': 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}}
+2024-05-10T21:24:30.451222+0300 | ERROR | MessageHandler:fill_blank_message:80 - 'result'
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1048ac5e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x104d6aca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10493a710>
+         │    └ <function MultiCommand.invoke at 0x104d6bec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x10493a5d0>
+           │               │       │       └ <function Command.invoke at 0x104d6b880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x10493a5d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x1072abb00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x10493a5d0>
+           │   │      │    └ <function run_handler at 0x104d77a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x104d6a200>
+           └ <click.core.Context object at 0x10493a5d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x1112eff60>
+    └ <message_handler.MessageHandler object at 0x1072c3090>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 203, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x1112efec0>
+    │    │                  └ <message_handler.MessageHandler object at 0x1072c3090>
+    │    └ <function BaseEventLoop.run_until_complete at 0x1050505e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x105050540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x105052340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x104fe2c00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    ask_message.text = cleaner_step["result"]
+    │           │      └ {'status': 'ok', 'description': 'ok', 'data': {'step': 'cleaner', 'result': 'hello'}, 'fields': ['status', 'description', 'da...
+    │           └ 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'
+    └ <dtypes.message.Message object at 0x1112f7ed0>
+
+KeyError: 'result'
+2024-05-10T21:24:35.523707+0300 | DEBUG | MessageHandler:listen_blank_messages:190 - Got 1 blank messages
+2024-05-10T21:24:35.524135+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x111359ad0>
+2024-05-10T21:24:35.524427+0300 | DEBUG | MessageHandler:fill_blank_message:45 - Trying to get ask message -> b88b4b7c6efb343c9306f8f1f5da407b_648
+2024-05-10T21:24:35.584149+0300 | DEBUG | MessageHandler:fill_blank_message:48 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_648', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1715365311, 'text': 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}}
+2024-05-10T21:25:05.920423+0300 | ERROR | MessageHandler:fill_blank_message:80 - 'result'
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1048ac5e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x104d6aca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10493a710>
+         │    └ <function MultiCommand.invoke at 0x104d6bec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x10493a5d0>
+           │               │       │       └ <function Command.invoke at 0x104d6b880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x10493a5d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x1072abb00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x10493a5d0>
+           │   │      │    └ <function run_handler at 0x104d77a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x104d6a200>
+           └ <click.core.Context object at 0x10493a5d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x1112eff60>
+    └ <message_handler.MessageHandler object at 0x1072c3090>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 203, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x1112efec0>
+    │    │                  └ <message_handler.MessageHandler object at 0x1072c3090>
+    │    └ <function BaseEventLoop.run_until_complete at 0x1050505e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x105050540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x105052340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x104fe2c00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    ask_message.text = cleaner_step["result"]
+    │           │      └ {'status': 'ok', 'description': 'ok', 'data': {'step': 'cleaner', 'result': 'hello'}, 'fields': ['status', 'description', 'da...
+    │           └ 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'
+    └ <dtypes.message.Message object at 0x11134d010>
+
+KeyError: 'result'
+2024-05-10T21:25:10.990981+0300 | DEBUG | MessageHandler:listen_blank_messages:190 - Got 1 blank messages
+2024-05-10T21:25:10.991324+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x11134edd0>
+2024-05-10T21:25:10.991727+0300 | DEBUG | MessageHandler:fill_blank_message:45 - Trying to get ask message -> b88b4b7c6efb343c9306f8f1f5da407b_648
+2024-05-10T21:25:11.048245+0300 | DEBUG | MessageHandler:fill_blank_message:48 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_648', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1715365311, 'text': 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}}
+2024-05-10T21:25:37.983701+0300 | ERROR | MessageHandler:fill_blank_message:80 - 'result'
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1048ac5e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x104d6aca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10493a710>
+         │    └ <function MultiCommand.invoke at 0x104d6bec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x10493a5d0>
+           │               │       │       └ <function Command.invoke at 0x104d6b880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x10493a5d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x1072abb00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x10493a5d0>
+           │   │      │    └ <function run_handler at 0x104d77a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x104d6a200>
+           └ <click.core.Context object at 0x10493a5d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x1112eff60>
+    └ <message_handler.MessageHandler object at 0x1072c3090>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 203, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x1112efec0>
+    │    │                  └ <message_handler.MessageHandler object at 0x1072c3090>
+    │    └ <function BaseEventLoop.run_until_complete at 0x1050505e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x105050540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x105052340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x104fe2c00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    ask_message.text = cleaner_step["result"]
+    │           │      └ {'status': 'ok', 'description': 'ok', 'data': {'step': 'cleaner', 'result': 'hello'}, 'fields': ['status', 'description', 'da...
+    │           └ 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'
+    └ <dtypes.message.Message object at 0x11135aa90>
+
+KeyError: 'result'
+2024-05-10T21:25:43.057739+0300 | DEBUG | MessageHandler:listen_blank_messages:190 - Got 1 blank messages
+2024-05-10T21:25:43.058157+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x111359e50>
+2024-05-10T21:25:43.058422+0300 | DEBUG | MessageHandler:fill_blank_message:45 - Trying to get ask message -> b88b4b7c6efb343c9306f8f1f5da407b_648
+2024-05-10T21:25:43.115136+0300 | DEBUG | MessageHandler:fill_blank_message:48 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_648', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1715365311, 'text': 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}}
+2024-05-10T21:26:10.602595+0300 | ERROR | MessageHandler:fill_blank_message:80 - 'result'
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1048ac5e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x104d6aca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10493a710>
+         │    └ <function MultiCommand.invoke at 0x104d6bec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x10493a5d0>
+           │               │       │       └ <function Command.invoke at 0x104d6b880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x10493a5d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x1072abb00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x10493a5d0>
+           │   │      │    └ <function run_handler at 0x104d77a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x104d6a200>
+           └ <click.core.Context object at 0x10493a5d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x1112eff60>
+    └ <message_handler.MessageHandler object at 0x1072c3090>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 203, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x1112efec0>
+    │    │                  └ <message_handler.MessageHandler object at 0x1072c3090>
+    │    └ <function BaseEventLoop.run_until_complete at 0x1050505e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x105050540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x105052340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x104fe2c00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    ask_message.text = cleaner_step["result"]
+    │           │      └ {'status': 'ok', 'description': 'ok', 'data': {'step': 'cleaner', 'result': 'hello'}, 'fields': ['status', 'description', 'da...
+    │           └ 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'
+    └ <dtypes.message.Message object at 0x11134a310>
+
+KeyError: 'result'
+2024-05-10T21:26:15.681884+0300 | DEBUG | MessageHandler:listen_blank_messages:190 - Got 1 blank messages
+2024-05-10T21:26:15.682349+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x111362f50>
+2024-05-10T21:26:15.682569+0300 | DEBUG | MessageHandler:fill_blank_message:45 - Trying to get ask message -> b88b4b7c6efb343c9306f8f1f5da407b_648
+2024-05-10T21:26:15.740784+0300 | DEBUG | MessageHandler:fill_blank_message:48 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_648', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1715365311, 'text': 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}}
+2024-05-10T21:26:43.359163+0300 | ERROR | MessageHandler:fill_blank_message:80 - 'result'
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1048ac5e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x104d6aca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10493a710>
+         │    └ <function MultiCommand.invoke at 0x104d6bec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x10493a5d0>
+           │               │       │       └ <function Command.invoke at 0x104d6b880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x10493a5d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x1072abb00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x10493a5d0>
+           │   │      │    └ <function run_handler at 0x104d77a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x104d6a200>
+           └ <click.core.Context object at 0x10493a5d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x1112eff60>
+    └ <message_handler.MessageHandler object at 0x1072c3090>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 203, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x1112efec0>
+    │    │                  └ <message_handler.MessageHandler object at 0x1072c3090>
+    │    └ <function BaseEventLoop.run_until_complete at 0x1050505e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x105050540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x105052340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x104fe2c00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    ask_message.text = cleaner_step["result"]
+    │           │      └ {'status': 'ok', 'description': 'ok', 'data': {'step': 'cleaner', 'result': 'hello'}, 'fields': ['status', 'description', 'da...
+    │           └ 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'
+    └ <dtypes.message.Message object at 0x11135ab50>
+
+KeyError: 'result'
+2024-05-10T21:26:48.428147+0300 | DEBUG | MessageHandler:listen_blank_messages:190 - Got 1 blank messages
+2024-05-10T21:26:48.428698+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x111354990>
+2024-05-10T21:26:48.428929+0300 | DEBUG | MessageHandler:fill_blank_message:45 - Trying to get ask message -> b88b4b7c6efb343c9306f8f1f5da407b_648
+2024-05-10T21:26:48.486589+0300 | DEBUG | MessageHandler:fill_blank_message:48 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_648', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1715365311, 'text': 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}}
+2024-05-10T21:27:21.799220+0300 | ERROR | MessageHandler:fill_blank_message:80 - 'result'
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1048ac5e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x104d6aca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10493a710>
+         │    └ <function MultiCommand.invoke at 0x104d6bec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x10493a5d0>
+           │               │       │       └ <function Command.invoke at 0x104d6b880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x10493a5d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x1072abb00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x10493a5d0>
+           │   │      │    └ <function run_handler at 0x104d77a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x104d6a200>
+           └ <click.core.Context object at 0x10493a5d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x1112eff60>
+    └ <message_handler.MessageHandler object at 0x1072c3090>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 203, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x1112efec0>
+    │    │                  └ <message_handler.MessageHandler object at 0x1072c3090>
+    │    └ <function BaseEventLoop.run_until_complete at 0x1050505e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x105050540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x105052340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x104fe2c00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    ask_message.text = cleaner_step["result"]
+    │           │      └ {'status': 'ok', 'description': 'ok', 'data': {'step': 'cleaner', 'result': 'hello'}, 'fields': ['status', 'description', 'da...
+    │           └ 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'
+    └ <dtypes.message.Message object at 0x11134f190>
+
+KeyError: 'result'
+2024-05-10T21:27:26.871742+0300 | DEBUG | MessageHandler:listen_blank_messages:190 - Got 1 blank messages
+2024-05-10T21:27:26.872098+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x11135a750>
+2024-05-10T21:27:26.872288+0300 | DEBUG | MessageHandler:fill_blank_message:45 - Trying to get ask message -> b88b4b7c6efb343c9306f8f1f5da407b_648
+2024-05-10T21:27:26.926477+0300 | DEBUG | MessageHandler:fill_blank_message:48 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_648', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1715365311, 'text': 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}}
+2024-05-10T21:27:37.085183+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-10T21:27:37.297743+0300 | INFO | Db:connect:38 - Connected to db
+2024-05-10T21:27:37.627267+0300 | DEBUG | MessageHandler:listen_blank_messages:190 - Got 1 blank messages
+2024-05-10T21:27:37.627416+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x1060006d0>
+2024-05-10T21:27:37.627497+0300 | DEBUG | MessageHandler:fill_blank_message:45 - Trying to get ask message -> b88b4b7c6efb343c9306f8f1f5da407b_648
+2024-05-10T21:27:37.680584+0300 | DEBUG | MessageHandler:fill_blank_message:48 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_648', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1715365311, 'text': 'helloпт, 10 мая 2024\u202fг. в 21:16, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}}
+2024-05-10T21:28:02.222711+0300 | DEBUG | MessageHandler:fill_blank_message:61 - Trying to update ask message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_648)
+2024-05-10T21:28:02.287295+0300 | DEBUG | MessageHandler:fill_blank_message:64 - Got response from updating review message -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000c0'), 'opTime': {'ts': Timestamp(1715365682, 8), 't': 192}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1715365682, 10), 'signature': {'hash': b'f\\x91c\\xee\\xa9\\xf6FN\\x12$\\xf9\\xc1\\x04\\x92\\xc4<f;\\xb9T', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1715365682, 8), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-10T21:28:02.287645+0300 | DEBUG | MessageHandler:fill_blank_message:67 - Generating step: Message(id=b88b4b7c6efb343c9306f8f1f5da407b_648_reply) -> {'status': 'ok', 'description': 'ok', 'data': {'step': 'cleaner', 'result': 'hello'}, 'fields': ['status', 'description', 'data']}
+2024-05-10T21:28:02.287774+0300 | DEBUG | MessageHandler:fill_blank_message:67 - Generating step: Message(id=b88b4b7c6efb343c9306f8f1f5da407b_648_reply) -> {'status': 'ok', 'description': 'ok', 'data': {'step': 'manager', 'result': 'Вітаю! Чим я можу вам допомогти? Чекаю на ваші запитання або коментарі.'}, 'fields': ['status', 'description', 'data']}
+2024-05-10T21:28:02.287888+0300 | DEBUG | MessageHandler:fill_blank_message:67 - Generating step: Message(id=b88b4b7c6efb343c9306f8f1f5da407b_648_reply) -> {'status': 'ok', 'description': 'ok', 'data': {'step': 'reviewer', 'result': 'Вітаю! Чим я можу вам допомогти? Чекаю на ваші запитання або коментарі.'}, 'fields': ['status', 'description', 'data']}
+2024-05-10T21:28:02.378126+0300 | DEBUG | MessageHandler:fill_blank_message:76 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000c0'), 'opTime': {'ts': Timestamp(1715365682, 15), 't': 192}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1715365682, 15), 'signature': {'hash': b'f\\x91c\\xee\\xa9\\xf6FN\\x12$\\xf9\\xc1\\x04\\x92\\xc4<f;\\xb9T', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1715365682, 15), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-10T21:40:47.103409+0300 | DEBUG | MessageHandler:listen_blank_messages:190 - Got 1 blank messages
+2024-05-10T21:40:47.105675+0300 | INFO | MessageHandler:fill_blank_message:31 - Got blank_message = <dtypes.message.Message object at 0x103a31450>
+2024-05-10T21:40:47.106244+0300 | DEBUG | MessageHandler:fill_blank_message:45 - Trying to get ask message -> b88b4b7c6efb343c9306f8f1f5da407b_649
+2024-05-10T21:40:47.167568+0300 | DEBUG | MessageHandler:fill_blank_message:48 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_649', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1715366445, 'text': 'how much for consultationпт, 10 мая 2024\u202fг. в 21:28, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}}

@@ -1,0 +1,47 @@
+[
+  {
+    "name": "get_creds()",
+    "description": "Find creads for specifed bank EVEN IF IT ISNT SOUND LIKE A BANK NAME",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "bank": {
+          "type": "string",
+          "description": "The name of bank. YOU SHOUD TRANSLATE IT TO ENGLISH"
+        }
+      },
+      "required": [
+        "bank"
+      ]
+    }
+  },
+  {
+    "name": "get_creds_list()",
+    "description": "Get the list of payment method ONLY IF USER DIDNT SPECIFIED ANY",
+    "parameters": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "get_price()",
+    "description": "Find a price in euro for service",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "service": {
+          "type": "string",
+          "description": "The name of service. YOU SHOUD TRANSLATE IT TO ENGLISH AND PASS ONLY MAIN WORD"
+        },
+        "location": {
+          "type": "string",
+          "description": "The name of country for this service. YOU SHOUD TRANSLATE IT TO ENGLISH"
+        }
+      },
+      "required": [
+        "service"
+      ]
+    }
+  }
+]

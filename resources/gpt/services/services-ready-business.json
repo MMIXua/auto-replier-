@@ -1,0 +1,77 @@
+[
+      {
+        "name": "Ready-made LLC with VAT",
+        "price": "200",
+        "value": "EUR"
+      },
+      {
+        "name": "Companies with a construction license (depends on the construction works code)",
+        "price": "1200>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Companies with a license for trading in ferrous and non-ferrous metals with export rights",
+        "price": "8700>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Companies with a license for security activities",
+        "price": "1000>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Companies with a license for international freight transportation",
+        "price": "700>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Companies with a license for domestic passenger transportation",
+        "price": "700>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Companies with a license for freight transportation within Ukraine",
+        "price": "600>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Companies with a license for foreign employment",
+        "price": "1500>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Ready-made financial companies",
+        "price": "7000>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Ready-made factoring companies",
+        "price": "8000",
+        "value": "EUR"
+      },
+      {
+        "name": "Ready-made leasing companies",
+        "price": "16000",
+        "value": "EUR"
+      },
+      {
+        "name": "Ready-made asset management companies",
+        "price": "35000",
+        "value": "EUR"
+      },
+      {
+        "name": "Ready-made securities trading companies",
+        "price": "11040",
+        "value": "dollars"
+      },
+      {
+        "name": "Ready-made agricultural companies (farms) without/with land",
+        "price": "1000>?/20000>?",
+        "value": "EUR"
+      },
+      {
+        "name": "Ready-made pawnshops",
+        "price": "7000",
+        "value": "EUR"
+      }
+    ]

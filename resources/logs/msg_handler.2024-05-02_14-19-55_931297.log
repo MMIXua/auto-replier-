@@ -1,0 +1,1537 @@
+2024-05-02T14:19:55.930833+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-02T14:19:56.545355+0300 | DEBUG | MessageHandler:listen_blank_messages:213 - Got 4 blank messages
+2024-05-02T14:19:56.546043+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x104ecee90>
+2024-05-02T14:19:56.547986+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x104ec7510>
+2024-05-02T14:19:56.548910+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x102dc2ed0>
+2024-05-02T14:19:56.549335+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x104ecf6d0>
+2024-05-02T14:20:05.018092+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/manager) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:19...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+2024-05-02T14:20:05.088623+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/manager) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:19...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+2024-05-02T14:20:05.478111+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/cleaner')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 44, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/cleaner) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:19...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/cleaner')
+2024-05-02T14:20:05.531381+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/manager) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:19...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+2024-05-02T14:20:10.585289+0300 | DEBUG | MessageHandler:listen_blank_messages:213 - Got 4 blank messages
+2024-05-02T14:20:10.585435+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x104efd050>
+2024-05-02T14:20:10.585643+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x104efc610>
+2024-05-02T14:20:10.585768+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x104ee03d0>
+2024-05-02T14:20:10.585874+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x104ee04d0>
+2024-05-02T14:20:11.729502+0300 | WARNING | MessageHandler:fill_blank_message:65 - Got wrong gpt response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-05-02T14:20:18.840056+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/manager) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:20...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+2024-05-02T14:20:18.861665+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/manager) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:20...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+2024-05-02T14:20:19.220531+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/cleaner')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 44, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/cleaner) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:20...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/cleaner')
+2024-05-02T14:20:24.285010+0300 | DEBUG | MessageHandler:listen_blank_messages:213 - Got 4 blank messages
+2024-05-02T14:20:24.285404+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x105203590>
+2024-05-02T14:20:24.285940+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x104efd310>
+2024-05-02T14:20:24.286302+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x102a83810>
+2024-05-02T14:20:24.286619+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x104efc8d0>
+2024-05-02T14:20:25.364065+0300 | WARNING | MessageHandler:fill_blank_message:65 - Got wrong gpt response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-05-02T14:20:32.801601+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/manager) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:20...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+2024-05-02T14:20:32.939503+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/cleaner')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 44, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/cleaner) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:20...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/cleaner')
+2024-05-02T14:20:33.910596+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/manager) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:20...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+2024-05-02T14:20:38.974600+0300 | DEBUG | MessageHandler:listen_blank_messages:213 - Got 4 blank messages
+2024-05-02T14:20:38.975120+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x10532aa90>
+2024-05-02T14:20:38.975720+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x104efd250>
+2024-05-02T14:20:38.976094+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x104ec7450>
+2024-05-02T14:20:38.976410+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x104efc910>
+2024-05-02T14:20:43.697200+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/manager) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:20...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+2024-05-02T14:20:43.703213+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/manager) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:20...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+2024-05-02T14:20:43.707320+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/cleaner')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 44, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/cleaner) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:20...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/cleaner')
+2024-05-02T14:20:43.711360+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1023685e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x102826ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1023f66d0>
+         │    └ <function MultiCommand.invoke at 0x102827ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1023f64d0>
+           │               │       │       └ <function Command.invoke at 0x102827880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1023f64d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104d67b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1023f64d0>
+           │   │      │    └ <function run_handler at 0x102833a60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x102826200>
+           └ <click.core.Context object at 0x1023f64d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x104eabd80>
+    └ <message_handler.MessageHandler object at 0x104d82d50>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x104eabce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x104d82d50>
+    │    └ <function BaseEventLoop.run_until_complete at 0x102b0c5e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102b0c540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102b0e340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102a9ec00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104cac900>
+                         └ <ClientResponse(http://127.0.0.1:6660/manager) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:20...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+2024-05-02T14:20:48.353207+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-02T14:20:48.873843+0300 | DEBUG | MessageHandler:listen_blank_messages:213 - Got 4 blank messages
+2024-05-02T14:20:48.874181+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x1054e6d50>
+2024-05-02T14:20:48.874699+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x1053fb490>
+2024-05-02T14:20:48.875054+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x1033dae90>
+2024-05-02T14:20:48.875350+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x1053fb510>
+2024-05-02T14:20:50.197965+0300 | WARNING | MessageHandler:fill_blank_message:65 - Got wrong gpt response -> {'status': 'ok', 'description': 'ok', 'data': None}
+2024-05-02T14:20:57.164238+0300 | INFO | MessageHandler:fill_blank_message:70 - Got gpt response -> {'status': 'ok', 'description': 'ok', 'data': "If there's a specific question or service you're interested in, please provide more details so I can assist you effectively. I'm here to help with any inquiries related to Innova Consulting Group's offerings."}
+2024-05-02T14:20:57.231811+0300 | DEBUG | MessageHandler:fill_blank_message:75 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': 'UpdateResult({\'n\': 1, \'electionId\': ObjectId(\'7fffffff00000000000000bf\'), \'opTime\': {\'ts\': Timestamp(1714648857, 7), \'t\': 191}, \'nModified\': 1, \'ok\': 1.0, \'$clusterTime\': {\'clusterTime\': Timestamp(1714648857, 7), \'signature\': {\'hash\': b\'\\x04\\n\\xff\\x85\\xf0\\xa6\\x12df(\\xc9\\xb5\\xb7\\xcd\\\'\\x8eu"\\x84\\xfb\', \'keyId\': 7306544719813672961}}, \'operationTime\': Timestamp(1714648857, 7), \'updatedExisting\': True}, acknowledged=True)'}
+2024-05-02T14:20:57.287025+0300 | DEBUG | MessageHandler:fill_blank_message:54 - Got cleaned updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': 'UpdateResult({\'n\': 1, \'electionId\': ObjectId(\'7fffffff00000000000000bf\'), \'opTime\': {\'ts\': Timestamp(1714648857, 12), \'t\': 191}, \'nModified\': 1, \'ok\': 1.0, \'$clusterTime\': {\'clusterTime\': Timestamp(1714648857, 12), \'signature\': {\'hash\': b\'\\x04\\n\\xff\\x85\\xf0\\xa6\\x12df(\\xc9\\xb5\\xb7\\xcd\\\'\\x8eu"\\x84\\xfb\', \'keyId\': 7306544719813672961}}, \'operationTime\': Timestamp(1714648857, 12), \'updatedExisting\': True}, acknowledged=True)'}
+2024-05-02T14:20:57.457414+0300 | INFO | MessageHandler:fill_blank_message:70 - Got gpt response -> {'status': 'ok', 'description': 'ok', 'data': 'Hello! How can I assist you today?'}
+2024-05-02T14:20:57.514618+0300 | DEBUG | MessageHandler:fill_blank_message:75 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': 'UpdateResult({\'n\': 1, \'electionId\': ObjectId(\'7fffffff00000000000000bf\'), \'opTime\': {\'ts\': Timestamp(1714648857, 24), \'t\': 191}, \'nModified\': 1, \'ok\': 1.0, \'$clusterTime\': {\'clusterTime\': Timestamp(1714648857, 25), \'signature\': {\'hash\': b\'\\x04\\n\\xff\\x85\\xf0\\xa6\\x12df(\\xc9\\xb5\\xb7\\xcd\\\'\\x8eu"\\x84\\xfb\', \'keyId\': 7306544719813672961}}, \'operationTime\': Timestamp(1714648857, 24), \'updatedExisting\': True}, acknowledged=True)'}
+2024-05-02T14:21:09.007499+0300 | INFO | MessageHandler:fill_blank_message:70 - Got gpt response -> {'status': 'ok', 'description': 'ok', 'data': 'Dear Den,\n\nHello! How can I assist you today? If you have any specific inquiries or need support related to our services at Innova Consulting Group, please feel free to share more details.\n\nLooking forward to providing you with the assistance you need.\n\nBest regards,\nOleg Shevchenko'}
+2024-05-02T14:21:09.065436+0300 | DEBUG | MessageHandler:fill_blank_message:75 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714648869, 1), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714648869, 1), 'signature': {'hash': b'\\xa1\\x0e\\xcc\\xea\\xd3dG\\xd8\\x07J\\xab\\xa0*\\xffU\\xc7\\x06\\x1c\\x072', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714648869, 1), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T14:48:39.618052+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-02T14:48:39.679357+0300 | DEBUG | MessageHandler:listen_blank_messages:213 - Got 1 blank messages
+2024-05-02T14:48:39.679524+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x104237490>
+2024-05-02T14:48:43.503912+0300 | ERROR | MessageHandler:fill_blank_message:79 - 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1007945e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x100c52ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1008226d0>
+         │    └ <function MultiCommand.invoke at 0x100c53ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1008224d0>
+           │               │       │       └ <function Command.invoke at 0x100c53880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1008224d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x1041b7b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1008224d0>
+           │   │      │    └ <function run_handler at 0x100c5fa60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x100c52200>
+           └ <click.core.Context object at 0x1008224d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x1042ffd80>
+    └ <message_handler.MessageHandler object at 0x1042555d0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x1042ffce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x1042555d0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x100f385e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x100f38540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x100f3a340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x100ecac00>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 60, in fill_blank_message
+    gpt_response = await response.json()
+                         │        └ <function ClientResponse.json at 0x104100900>
+                         └ <ClientResponse(http://127.0.0.1:6660/manager) [500 Internal Server Error]>
+                           <CIMultiDictProxy('Date': 'Thu, 02 May 2024 11:48...
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 1166, in json
+    raise ContentTypeError(
+          └ <class 'aiohttp.client_exceptions.ContentTypeError'>
+
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://127.0.0.1:6660/manager')
+2024-05-02T14:48:44.681379+0300 | ERROR | MessageHandler:listen_review_messages:195 - Cannot connect to host 127.0.0.1:6660 ssl:default [Connect call failed ('127.0.0.1', 6660)]
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/connector.py", line 992, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)
+                 │    │     │                  │       └ {'ssl': None, 'family': 0, 'proto': 0, 'flags': 0, 'server_hostname': None, 'local_addr': None}
+                 │    │     │                  └ (functools.partial(<class 'aiohttp.client_proto.ResponseHandler'>, loop=<_UnixSelectorEventLoop running=True closed=False deb...
+                 │    │     └ <function BaseEventLoop.create_connection at 0x100f394e0>
+                 │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+                 └ <aiohttp.connector.TCPConnector object at 0x1042be790>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1079, in create_connection
+    raise exceptions[0]
+          └ None
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1063, in create_connection
+    sock = await self._connect_sock(
+                 │    └ <function BaseEventLoop._connect_sock at 0x100f39440>
+                 └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 967, in _connect_sock
+    await self.sock_connect(sock, address)
+          │    │            │     └ ('127.0.0.1', 6660)
+          │    │            └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+          │    └ <function BaseSelectorEventLoop.sock_connect at 0x10104c040>
+          └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/selector_events.py", line 634, in sock_connect
+    return await fut
+                 └ None
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/selector_events.py", line 674, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+                  └ 61
+
+ConnectionRefusedError: [Errno 61] Connect call failed ('127.0.0.1', 6660)
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1007945e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x100c52ca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1008226d0>
+         │    └ <function MultiCommand.invoke at 0x100c53ec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1008224d0>
+           │               │       │       └ <function Command.invoke at 0x100c53880>
+           │               │       └ <Command run_handler>
+           │               └ <click.core.Context object at 0x1008224d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x1041b7b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {}
+           │   │      │    │           └ <click.core.Context object at 0x1008224d0>
+           │   │      │    └ <function run_handler at 0x100c5fa60>
+           │   │      └ <Command run_handler>
+           │   └ <function Context.invoke at 0x100c52200>
+           └ <click.core.Context object at 0x1008224d0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_handler.py", line 18, in run_handler
+    msg_handler.listen()
+    │           └ <function MessageHandler.listen at 0x1042ffd80>
+    └ <message_handler.MessageHandler object at 0x1042555d0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 226, in listen
+    loop.run_until_complete(self.listen_blank_messages())
+    │    │                  │    └ <function MessageHandler.listen_blank_messages at 0x1042ffce0>
+    │    │                  └ <message_handler.MessageHandler object at 0x1042555d0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x100f385e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x100f38540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x100f3a340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x100ecac00>
+    └ <Handle Task.task_wakeup(<Future finis...0.1', 6660)")>)>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finis...0.1', 6660)")>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finis...0.1', 6660)")>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finis...0.1', 6660)")>)>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/message_handler/__init__.py", line 181, in listen_review_messages
+    async with http_client.get(f"{CONN_API}/messages", json={
+               │           └ <function ClientSession.get at 0x1041b4360>
+               └ <aiohttp.client.ClientSession object at 0x104237510>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client.py", line 1194, in __aenter__
+    self._resp = await self._coro
+    │    │             │    └ <member '_coro' of '_BaseRequestContextManager' objects>
+    │    │             └ <aiohttp.client._RequestContextManager object at 0x1043021a0>
+    │    └ <member '_resp' of '_BaseRequestContextManager' objects>
+    └ <aiohttp.client._RequestContextManager object at 0x1043021a0>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/client.py", line 578, in _request
+    conn = await self._connector.connect(
+                 │    │          └ <function BaseConnector.connect at 0x104124fe0>
+                 │    └ <aiohttp.connector.TCPConnector object at 0x1042be790>
+                 └ <aiohttp.client.ClientSession object at 0x104237510>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+                  │    │                  │    │       └ ClientTimeout(total=300, connect=None, sock_read=None, sock_connect=None, ceil_threshold=5)
+                  │    │                  │    └ []
+                  │    │                  └ <aiohttp.client_reqrep.ClientRequest object at 0x10437ead0>
+                  │    └ <function TCPConnector._create_connection at 0x104125bc0>
+                  └ <aiohttp.connector.TCPConnector object at 0x1042be790>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/connector.py", line 911, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+                     │    │                         │    │       └ ClientTimeout(total=300, connect=None, sock_read=None, sock_connect=None, ceil_threshold=5)
+                     │    │                         │    └ []
+                     │    │                         └ <aiohttp.client_reqrep.ClientRequest object at 0x10437ead0>
+                     │    └ <function TCPConnector._create_direct_connection at 0x1041262a0>
+                     └ <aiohttp.connector.TCPConnector object at 0x1042be790>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1235, in _create_direct_connection
+    raise last_exc
+          └ ClientConnectorError(ConnectionKey(host='127.0.0.1', port=6660, is_ssl=False, ssl=True, proxy=None, proxy_auth=None, proxy_he...
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1204, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                          │    └ <function TCPConnector._wrap_create_connection at 0x104125e40>
+                          └ <aiohttp.connector.TCPConnector object at 0x1042be790>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1000, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+          │            │   └ <property object at 0x103fcfe70>
+          │            └ <aiohttp.client_reqrep.ClientRequest object at 0x10437ead0>
+          └ <class 'aiohttp.client_exceptions.ClientConnectorError'>
+
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host 127.0.0.1:6660 ssl:default [Connect call failed ('127.0.0.1', 6660)]
+2024-05-02T14:48:49.969338+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-02T14:48:50.294083+0300 | DEBUG | MessageHandler:listen_blank_messages:213 - Got 1 blank messages
+2024-05-02T14:48:50.294361+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x105682e10>
+2024-05-02T14:49:02.475833+0300 | INFO | MessageHandler:fill_blank_message:70 - Got gpt response -> {'status': 'ok', 'description': 'ok', 'data': "We seem to be stuck in a loop of greetings. If there's something specific you need assistance with or have questions about, please feel free to share. I'm here to assist with any queries related to Innova Consulting Group's services."}
+2024-05-02T14:49:02.536407+0300 | DEBUG | MessageHandler:fill_blank_message:75 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714650542, 21), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714650542, 21), 'signature': {'hash': b'_+\\x94)\\xc2\\x18\\xf5m\\x91\\xe2\\x8bjm+U\\xbf\\xbeM#\\xb9', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714650542, 21), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T14:51:54.463114+0300 | DEBUG | MessageHandler:listen_blank_messages:213 - Got 1 blank messages
+2024-05-02T14:51:54.464916+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x1057d3090>
+2024-05-02T14:52:03.522869+0300 | DEBUG | MessageHandler:fill_blank_message:54 - Got cleaned updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714650723, 18), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714650723, 18), 'signature': {'hash': b'\\xf0^Ai\\xde\\xed\\xd3\\xfbL\\xec\\xa3\\xbd\\x94\\xb7:\\xe7\\xa3\\x16\\x05\\x17', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714650723, 18), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T14:52:12.240079+0300 | INFO | MessageHandler:fill_blank_message:70 - Got gpt response -> {'status': 'ok', 'description': 'ok', 'data': "I'm sorry, but I can't assist with the request."}
+2024-05-02T14:52:12.294880+0300 | DEBUG | MessageHandler:fill_blank_message:75 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714650732, 11), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714650732, 11), 'signature': {'hash': b'b\\xbc\\xac]*\\x0e\\x8a\\x1a\\x84:\\xc6\\xcao1\\x04\\xa7jN\\xde\\x92', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714650732, 11), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T14:53:58.600394+0300 | DEBUG | MessageHandler:listen_review_messages:190 - Got 1 review messages
+2024-05-02T14:53:58.602323+0300 | INFO | MessageHandler:review_message:82 - Got review_message = <dtypes.message.Message object at 0x1057e1d90>
+2024-05-02T14:54:07.099063+0300 | DEBUG | MessageHandler:review_message:106 - Got cleaned updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714650847, 6), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714650847, 6), 'signature': {'hash': b'lRJ\\xce$\\xb0)\\xebg\\xdb\\xe0\\xfa\\xf2\\xadb\\xa1\\xa7\\xe3O\\x02', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714650847, 6), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T14:54:07.100180+0300 | DEBUG | MessageHandler:review_message:108 - Trying to get reply message -> b88b4b7c6efb343c9306f8f1f5da407b_587_reply
+2024-05-02T14:54:07.149424+0300 | DEBUG | MessageHandler:review_message:114 - Got response from getting ask message -> {'status': 'ok', 'description': 'ok', 'message': {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_587_reply', 'reply_to_id': 'b88b4b7c6efb343c9306f8f1f5da407b_587', 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'bot', 'source': 'gmail', 'source_link': None, 'subject': 'Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'sent', 'date': 1714650712, 'text': "<p>I'm sorry, but I can't assist with the request.</p>"}}
+2024-05-02T14:54:15.298045+0300 | INFO | MessageHandler:review_message:140 - Got gpt response -> {'status': 'ok', 'description': 'ok', 'data': "<p>I'm sorry, but I can't assist with the request at this time.</p>"}
+2024-05-02T14:54:15.300738+0300 | DEBUG | MessageHandler:review_message:153 - Trying to update target message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_587_reply)
+2024-05-02T14:54:15.370350+0300 | DEBUG | MessageHandler:review_message:158 - Got updated target message response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714650855, 15), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714650855, 15), 'signature': {'hash': b'\\xe0\\x0b+ix\\x94\\xe9k\\xaa\\x9b\\t\\xa3\\xae\\x879\\xcds\\xae\\x92\\xb3', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714650855, 15), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T14:54:15.370743+0300 | DEBUG | MessageHandler:review_message:163 - Trying to update review message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_587_review_cbb304c03af63cb0a3beda3518389694)
+2024-05-02T14:54:15.433678+0300 | DEBUG | MessageHandler:review_message:170 - Got updated review message response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714650855, 20), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714650855, 20), 'signature': {'hash': b'\\xe0\\x0b+ix\\x94\\xe9k\\xaa\\x9b\\t\\xa3\\xae\\x879\\xcds\\xae\\x92\\xb3', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714650855, 20), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T14:55:29.692350+0300 | DEBUG | MessageHandler:listen_blank_messages:213 - Got 1 blank messages
+2024-05-02T14:55:29.694416+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x10574cd10>
+2024-05-02T14:55:40.198041+0300 | DEBUG | MessageHandler:fill_blank_message:54 - Got cleaned updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714650940, 9), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714650940, 9), 'signature': {'hash': b'\\x8e*\\xe2&v\\xf8-\\xbc%\\xb1\\xd5\\xbdJu\\x84\\xc8\\xeeRW^', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714650940, 9), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T14:55:48.667925+0300 | INFO | MessageHandler:fill_blank_message:70 - Got gpt response -> {'status': 'ok', 'description': 'ok', 'data': "I'm sorry, but I can't assist with the request."}
+2024-05-02T14:55:48.724024+0300 | DEBUG | MessageHandler:fill_blank_message:75 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714650948, 26), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714650948, 26), 'signature': {'hash': b'\\x80\\xdb}\\xb2\\xa4\\xeb?\\xe9\\xe6\\xb3\\xfau\\xac\\x17\\xf61\\x9dOT\\xc2', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714650948, 26), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T15:03:59.629928+0300 | DEBUG | MessageHandler:listen_blank_messages:213 - Got 1 blank messages
+2024-05-02T15:03:59.632358+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x1057f6290>
+2024-05-02T15:04:08.270388+0300 | DEBUG | MessageHandler:fill_blank_message:54 - Got cleaned updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714651448, 16), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714651448, 16), 'signature': {'hash': b'\\x99\\xa1\\x00\\xe4\\x9d\\xfce;\\x0c\\xd6\\x80\\xde\\x94\\xadt\\x9a\\x07\\x01\\x0e\\xaf', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714651448, 16), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T15:04:43.494968+0300 | INFO | MessageHandler:fill_blank_message:70 - Got gpt response -> {'status': 'ok', 'description': 'ok', 'data': "Доброго дня, Марко!\n\nМене звати Олег Шевченко, я представник Innova Consulting Group, що об'єднує Legal Solutions, Key Solutions та Marketing Mix і має 12 років досвіду у сфері консалтингових послуг.\n\nЩодо вашого запитання про отримання португальського громадянства, необхідні певні деталі та оцінка вашого індивідуального випадку для точної відповіді. Однак, зазвичай право на отримання португальського громадянства може наслідуватися за певних умов від батьків до дітей, включаючи розгляд віку, стану громадянства батьків та інших факторів.\n\nЯкщо ви зацікавлені у детальній консультації з цього питання, слід зазначити, що консультація є платною послугою. Ми можемо надати вам індивідуальну оцінку та супроводження у процесі реєстрації та юридического супроводу міжнародної компанії. \n\nДля отримання інформації про вартість послуги та оформлення замовлення, будь ласка, зв'яжіться з нами для подальших деталей.\n\nЗ повагою,\nОлег Шевченко, Innova Consulting Group"}
+2024-05-02T15:04:43.568043+0300 | DEBUG | MessageHandler:fill_blank_message:75 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714651483, 22), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714651483, 22), 'signature': {'hash': b'\\xfc?GG\\x05\\xdeGb\\x9e\\xc1~\\x97\\t\\xb0\\xaf$@\\x10\\n\\xec', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714651483, 22), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T15:09:27.018365+0300 | DEBUG | MessageHandler:listen_blank_messages:213 - Got 1 blank messages
+2024-05-02T15:09:27.021213+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x1057f6f90>
+2024-05-02T15:09:35.867394+0300 | DEBUG | MessageHandler:fill_blank_message:54 - Got cleaned updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714651775, 69), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714651775, 69), 'signature': {'hash': b'\\xf9,\\xc2\\x1c^\\x03\\x14nvz\\x83\\xedp,\\x0ff\\x9eHn\\xd3', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714651775, 69), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T15:10:01.442708+0300 | INFO | MessageHandler:fill_blank_message:70 - Got gpt response -> {'status': 'ok', 'description': 'ok', 'data': 'Доброго дня!\n\nДля отримання португальського громадянства важливо розуміти, що процес може варіюватися залежно від конкретних обставин. Ваш випадок вимагатиме аналізу на основі португальського законодавства про громадянство, зокрема, з урахуванням того, що ваш батько є громадянином Португалії.\n\nМожливість отримання громадянства для дітей, батьки яких розведені, і які досягли 18 років, може залежати від низки факторів, включаючи ваше нинішнє громадянство, тривалість проживання батька в Португалії та інші.\n\nЩоб отримати точну відповідь та розпочати процес, рекомендуємо скористатися нашою платною консультацією, де ми зможемо детально розглянути ваш випадок та надати вам кваліфіковану допомогу.\n\nЯкщо вас цікавить ця послуга, будь ласка, повідомте, і ми надамо інформацію про вартість та наступні кроки.\n\nЗ повагою,\nОлег Шевченко, Innova Consulting Group'}
+2024-05-02T15:10:01.504121+0300 | DEBUG | MessageHandler:fill_blank_message:75 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714651801, 20), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714651801, 20), 'signature': {'hash': b'=\\x94\\xc4\\xfa\\xbbrX\\x03B\\xb4DTR\\x9f\\xc0\\xb8\\x88\\x06 \\xe6', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714651801, 20), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T15:13:44.096308+0300 | DEBUG | MessageHandler:listen_blank_messages:213 - Got 1 blank messages
+2024-05-02T15:13:44.098776+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x102c40e10>
+2024-05-02T15:14:28.775390+0300 | DEBUG | MessageHandler:fill_blank_message:54 - Got cleaned updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714652068, 28), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714652068, 28), 'signature': {'hash': b'X\\x8c\\xc35\\x011vi:\\xf9\\xa3\\xa4Y\\x88S\\x97\\xbf\\xb4e\\x7f', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714652068, 28), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T15:15:00.597326+0300 | INFO | MessageHandler:fill_blank_message:70 - Got gpt response -> {'status': 'ok', 'description': 'ok', 'data': 'Доброго дня, Марко! Мене звати Олег Шевченко, я представляю компанію Innova Consulting Group, яка вже понад 12 років надає консультаційні послуги в сфері юридичних рішень, ключових рішень та маркетингових стратегій. \n\nЩодо вашого питання про можливість отримання португальського громадянства, це залежить від кількох факторів, включаючи ваші особисті обставини та законодавство Португалії. Я можу організувати консультацію з нашим юридичним фахівцем, щоб детально обговорити ваш випадок. Звертаю вашу увагу, що консультація є платною послугою. Якщо вас цікавить вартість такої консультації, будь ласка, дайте знати, і я надам вам всю необхідну інформацію.'}
+2024-05-02T15:15:00.657934+0300 | DEBUG | MessageHandler:fill_blank_message:75 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714652100, 21), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714652100, 21), 'signature': {'hash': b'\\xfd\\x17\\xda\\x9ez!U\\x15\\x9b\\x13|\\x8d\\x12\\xa3\\xbc\\xb0\\x8dT\\x18]', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714652100, 21), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T15:17:07.077047+0300 | DEBUG | MessageHandler:listen_blank_messages:213 - Got 1 blank messages
+2024-05-02T15:17:07.078672+0300 | INFO | MessageHandler:fill_blank_message:26 - Got blank_message = <dtypes.message.Message object at 0x105683350>
+2024-05-02T15:17:15.991692+0300 | DEBUG | MessageHandler:fill_blank_message:54 - Got cleaned updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714652236, 5), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714652236, 5), 'signature': {'hash': b'\\xae\\x0cr\\x11&\\xe8\\xab\\xca/\\x8d\\xc9D\\x17x%\\x03\\n>ic', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714652236, 5), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T15:17:40.716058+0300 | INFO | MessageHandler:fill_blank_message:70 - Got gpt response -> {'status': 'ok', 'description': 'ok', 'data': "Дякую за ваш інтерес, Марко. Вартість юридичної консультації становить 50 EUR. Ця консультація допоможе вам з'ясувати всі нюанси отримання португальського громадянства на основі вашої індивідуальної ситуації і допоможе підготувати необхідні документи, якщо це буде можливо.\n\nЯкщо ви готові продовжити, я можу надати вам інформацію про способи оплати або відразу ж організувати зустріч з нашим спеціалістом."}
+2024-05-02T15:17:40.774383+0300 | DEBUG | MessageHandler:fill_blank_message:75 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714652260, 30), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714652260, 30), 'signature': {'hash': b'\\xef\\xfa\\xec\\xa6\\xde_U\\x94\\x13DT\\x1dI\\x16\\x83\\xd9v4\\xc8j', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714652260, 30), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T15:32:03.117897+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-05-02T15:32:53.827943+0300 | DEBUG | MessageHandler:listen_blank_messages:222 - Got 1 blank messages
+2024-05-02T15:32:53.829694+0300 | INFO | MessageHandler:fill_blank_message:28 - Got blank_message = <dtypes.message.Message object at 0x107a9b010>
+2024-05-02T15:33:02.344762+0300 | DEBUG | MessageHandler:fill_blank_message:58 - Got cleaned updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': "UpdateResult({'n': 1, 'electionId': ObjectId('7fffffff00000000000000bf'), 'opTime': {'ts': Timestamp(1714653182, 17), 't': 191}, 'nModified': 1, 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1714653182, 17), 'signature': {'hash': b'\\x9a\\x99+8\\xed\\xaa\\x02=d\\xca\\x89\\xd0F\\x1f\\x98\\xa3v\\xc2\\xf2B', 'keyId': 7306544719813672961}}, 'operationTime': Timestamp(1714653182, 17), 'updatedExisting': True}, acknowledged=True)"}
+2024-05-02T15:33:02.346102+0300 | DEBUG | MessageHandler:fill_blank_message:63 - Trying to add old ask message -> {'id': 'b88b4b7c6efb343c9306f8f1f5da407b_594_unparsed', 'reply_to_id': None, 'reviewer_id': None, 'reviewed': False, 'dialog_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'sender_id': 'b88b4b7c6efb343c9306f8f1f5da407b', 'source': 'gmail', 'source_link': None, 'subject': 'Re: запрос по Re: crystal.tax: запрос по Регистрация и юридическое сопровождение международных компаний в любой точке мира', 'status': 'received', 'date': 1714653171, 'text': 'Доброго дня. Мій тато отримав португальський паспорт. Мама і тато розведені. Мені 22 роки. Підкажіть будь ласка, чи можу я отримати португальське громадянство? З повагою, Марко.чт, 2 мая 2024\u202fг. в 15:15, Oleg Shevchenko <manager.innovacg@gmail.com>:\n'}
+2024-05-02T15:33:02.350747+0300 | INFO | MessageHandler:fill_blank_message:67 - Got response from adding old ask message -> {'detail': [{'type': 'string_type', 'loc': ['body', 'reply_to_id'], 'msg': 'Input should be a valid string', 'input': None, 'url': 'https://errors.pydantic.dev/2.6/v/string_type'}, {'type': 'string_type', 'loc': ['body', 'reviewer_id'], 'msg': 'Input should be a valid string', 'input': None, 'url': 'https://errors.pydantic.dev/2.6/v/string_type'}, {'type': 'string_type', 'loc': ['body', 'source_link'], 'msg': 'Input should be a valid string', 'input': None, 'url': 'https://errors.pydantic.dev/2.6/v/string_type'}]}
+2024-05-02T15:33:40.503450+0300 | INFO | MessageHandler:fill_blank_message:83 - Got gpt response -> {'status': 'ok', 'description': 'ok', 'data': 'Доброго дня, Марко! Мене звати Олег Шевченко, я представляю компанію Innova Consulting Group, яка вже понад 12 років надає консультаційні послуги в сфері юридичних рішень, ключових рішень та маркетингових стратегій. \n\nЩодо вашого питання про можливість отримання португальського громадянства, це залежить від кількох факторів, включаючи ваші особисті обставини та законодавство Португалії. Я можу організувати консультацію з нашим юридичним фахівцем, щоб детально обговорити ваш випадок. Звертаю вашу увагу, що консультація є платною послугою. Якщо вас цікавить вартість такої консультації, будь ласка, дайте знати, і я надам вам всю необхідну інформацію.'}
+2024-05-02T15:33:40.559286+0300 | DEBUG | MessageHandler:fill_blank_message:88 - Got updated_message_response -> {'status': 'ok', 'description': 'ok', 'data': 'UpdateResult({\'n\': 1, \'electionId\': ObjectId(\'7fffffff00000000000000bf\'), \'opTime\': {\'ts\': Timestamp(1714653220, 20), \'t\': 191}, \'nModified\': 1, \'ok\': 1.0, \'$clusterTime\': {\'clusterTime\': Timestamp(1714653220, 20), \'signature\': {\'hash\': b\'\\xe3Ud\\xb66\\t\\xcc\\xda\\xd1\\xef\\x80-\\xce7\\xa7$\\x81"\\xb1\\xdf\', \'keyId\': 7306544719813672961}}, \'operationTime\': Timestamp(1714653220, 20), \'updatedExisting\': True}, acknowledged=True)'}

@@ -1,0 +1,44 @@
+
+<head>
+  <link rel="stylesheet" href="test1.css">
+  <link rel="stylesheet" href="test2.css">
+  <script src="https://cdn.tutorialjinni.com/hls.js/1.2.1/hls.min.js"></script>
+</head>
+
+<body>
+  <div class="area" >
+    <div>
+      <div class="inner">
+        <div class="player-wrapper">
+          <div class="aspect-spacer"></div>
+          <div class="pos-absolute full-width full-height top-0">
+            <video
+              id="video-player"
+              class="el-player"
+              src="{{ hls }}"
+              controls
+              autoplay
+            ></video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="circles">
+      {% for eblo in ebla %}
+        <li><img src="{{ eblo }}"></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <script>
+    if (Hls.isSupported()) {
+      var video = document.getElementById('video-player');
+
+      var hls = new Hls();
+      hls.loadSource(video.src);
+      hls.attachMedia(video);
+    }else{
+        alert("Cannot stream HLS, use another video source");
+    }
+  </script>
+</body>

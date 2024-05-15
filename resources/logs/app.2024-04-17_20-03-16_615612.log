@@ -1,0 +1,107 @@
+2024-04-17T20:03:16.621041+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-04-17T20:03:16.807379+0300 | INFO | Db:connect:38 - Connected to db
+2024-04-17T20:03:42.491570+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:03:47.544336+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:03:52.598209+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:03:57.652678+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:04:02.705964+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:04:03.172138+0300 | DEBUG | Db:get_config:210 - Got config -> main -> {'faces': [{'firstname': 'Oleg', 'lastname': 'Shevchenko', 'sex': 'male', 'age': '35'}], 'payments': [{'name': 'monobank', 'keys': 'моно, монобанк, mono, monobank', 'card_number': '1111 1111 1111 1111', 'cardholder_name': 'Mono Jack', 'value': 'hryvnia'}, {'name': 'privatbank', 'keys': 'приват, приватбанк, privat, privatbank', 'card_number': '2222 2222 2222 2222', 'cardholder_name': 'Privat Jack', 'value': 'hryvnia'}], 'reviewers': [{'link': 'thedenisminka@gmail.com', 'id': 'cbb304c03af63cb0a3beda3518389694', 'source': 'gmail'}, {'link': 'ctmakc@gmail.com', 'id': '551d9d36e7eb364f8a4a492e3d50193f', 'source': 'gmail'}, {'link': 'vblacksquare', 'id': '885554630', 'source': 'telegram'}, {'link': 'msconsult', 'id': '172396465', 'source': 'telegram'}], 'assistants': {'manager': 'asst_cQzJEk99zoDwdJWNahXs9bOd', 'reviewer': 'asst_UPdcibzGPGPfk1UHzBHGxV7b'}, 'id': 'main'}
+2024-04-17T20:04:07.764873+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:04:12.822342+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:04:17.874187+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:04:22.928076+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:04:27.985010+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:04:33.041331+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:04:38.092957+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:04:43.145229+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:04:48.199853+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:04:53.257406+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:04:58.310883+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:05:03.363715+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:05:08.418614+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:05:13.471148+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:05:18.534666+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:05:23.584514+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:05:28.634268+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:05:33.689989+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:05:38.752365+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:05:43.801720+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:05:47.998849+0300 | DEBUG | Db:get_config:210 - Got config -> main -> {'faces': [{'firstname': 'Oleg', 'lastname': 'Shevchenko', 'sex': 'male', 'age': '35'}], 'payments': [{'name': 'monobank', 'keys': 'моно, монобанк, mono, monobank', 'card_number': '1111 1111 1111 1111', 'cardholder_name': 'Mono Jack', 'value': 'hryvnia'}, {'name': 'privatbank', 'keys': 'приват, приватбанк, privat, privatbank', 'card_number': '2222 2222 2222 2222', 'cardholder_name': 'Privat Jack', 'value': 'hryvnia'}], 'reviewers': [{'link': 'thedenisminka@gmail.com', 'id': 'cbb304c03af63cb0a3beda3518389694', 'source': 'gmail'}, {'link': 'ctmakc@gmail.com', 'id': '551d9d36e7eb364f8a4a492e3d50193f', 'source': 'gmail'}, {'link': 'vblacksquare', 'id': '885554630', 'source': 'telegram'}, {'link': 'msconsult', 'id': '172396465', 'source': 'telegram'}], 'assistants': {'manager': 'asst_cQzJEk99zoDwdJWNahXs9bOd', 'reviewer': 'asst_UPdcibzGPGPfk1UHzBHGxV7b'}, 'id': 'main'}
+2024-04-17T20:05:48.855536+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:05:53.908072+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:05:58.961226+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:06:04.016885+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:06:09.069912+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:06:14.131591+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:06:19.187405+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:06:24.241257+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:06:29.293827+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:06:34.349751+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:06:39.405383+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:06:44.462067+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:06:49.520307+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:06:54.573825+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:06:59.626261+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:07:04.679326+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:07:09.732538+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:07:14.784541+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:07:19.846745+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:07:24.899638+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:07:29.954540+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:07:35.005508+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:07:40.057082+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:07:45.113442+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:07:50.186528+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:07:55.254445+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:08:01.108624+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:08:06.165259+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:08:11.228936+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:08:16.280523+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:08:17.070728+0300 | DEBUG | Db:get_config:210 - Got config -> main -> {'faces': [{'firstname': 'Oleg', 'lastname': 'Shevchenko', 'sex': 'male', 'age': '35'}], 'payments': [{'name': 'monobank', 'keys': 'моно, монобанк, mono, monobank', 'card_number': '1111 1111 1111 1111', 'cardholder_name': 'Mono Jack', 'value': 'hryvnia'}, {'name': 'privatbank', 'keys': 'приват, приватбанк, privat, privatbank', 'card_number': '2222 2222 2222 2222', 'cardholder_name': 'Privat Jack', 'value': 'hryvnia'}], 'reviewers': [{'link': 'thedenisminka@gmail.com', 'id': 'cbb304c03af63cb0a3beda3518389694', 'source': 'gmail'}, {'link': 'ctmakc@gmail.com', 'id': '551d9d36e7eb364f8a4a492e3d50193f', 'source': 'gmail'}, {'link': 'vblacksquare', 'id': '885554630', 'source': 'telegram'}, {'link': 'msconsult', 'id': '172396465', 'source': 'telegram'}], 'assistants': {'manager': 'asst_cQzJEk99zoDwdJWNahXs9bOd', 'reviewer': 'asst_UPdcibzGPGPfk1UHzBHGxV7b'}, 'id': 'main'}
+2024-04-17T20:08:17.141733+0300 | DEBUG | Db:get_user:59 - Got user -> b88b4b7c6efb343c9306f8f1f5da407b -> Client(id=b88b4b7c6efb343c9306f8f1f5da407b)
+2024-04-17T20:08:17.142179+0300 | DEBUG | Db:add_user:76 - Coundn't add user -> duplicate -> Client(id=b88b4b7c6efb343c9306f8f1f5da407b)
+2024-04-17T20:08:17.192208+0300 | DEBUG | Db:get_config:210 - Got config -> main -> {'faces': [{'firstname': 'Oleg', 'lastname': 'Shevchenko', 'sex': 'male', 'age': '35'}], 'payments': [{'name': 'monobank', 'keys': 'моно, монобанк, mono, monobank', 'card_number': '1111 1111 1111 1111', 'cardholder_name': 'Mono Jack', 'value': 'hryvnia'}, {'name': 'privatbank', 'keys': 'приват, приватбанк, privat, privatbank', 'card_number': '2222 2222 2222 2222', 'cardholder_name': 'Privat Jack', 'value': 'hryvnia'}], 'reviewers': [{'link': 'thedenisminka@gmail.com', 'id': 'cbb304c03af63cb0a3beda3518389694', 'source': 'gmail'}, {'link': 'ctmakc@gmail.com', 'id': '551d9d36e7eb364f8a4a492e3d50193f', 'source': 'gmail'}, {'link': 'vblacksquare', 'id': '885554630', 'source': 'telegram'}, {'link': 'msconsult', 'id': '172396465', 'source': 'telegram'}], 'assistants': {'manager': 'asst_cQzJEk99zoDwdJWNahXs9bOd', 'reviewer': 'asst_UPdcibzGPGPfk1UHzBHGxV7b'}, 'id': 'main'}
+2024-04-17T20:08:17.238185+0300 | DEBUG | Db:get_dialog:104 - Got dialog -> b88b4b7c6efb343c9306f8f1f5da407b -> <dtypes.dialog.Dialog object at 0x10711ca50>
+2024-04-17T20:08:17.238390+0300 | DEBUG | Db:add_dialog:119 - Coudn't add dialog -> duplicate -> <dtypes.dialog.Dialog object at 0x1072ad790>
+2024-04-17T20:08:17.288303+0300 | DEBUG | Db:get_message:143 - Coudn't get message -> b88b4b7c6efb343c9306f8f1f5da407b_367 -> b88b4b7c6efb343c9306f8f1f5da407b_367
+2024-04-17T20:08:17.340607+0300 | DEBUG | Db:add_message:168 - Added message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367)
+2024-04-17T20:08:17.388067+0300 | DEBUG | Db:get_message:143 - Coudn't get message -> b88b4b7c6efb343c9306f8f1f5da407b_367_reply -> b88b4b7c6efb343c9306f8f1f5da407b_367_reply
+2024-04-17T20:08:17.451615+0300 | DEBUG | Db:add_message:168 - Added message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply)
+2024-04-17T20:08:21.337060+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:08:26.390656+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:08:31.444585+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:08:36.498956+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:08:41.554832+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> [<dtypes.message.Message object at 0x10726e950>]
+2024-04-17T20:08:41.611060+0300 | DEBUG | Db:update_message:176 - Updated message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply)
+2024-04-17T20:08:41.660182+0300 | DEBUG | Db:get_dialog:104 - Got dialog -> b88b4b7c6efb343c9306f8f1f5da407b -> <dtypes.dialog.Dialog object at 0x1070cef10>
+2024-04-17T20:08:41.707590+0300 | DEBUG | Db:get_message:147 - Got message -> b88b4b7c6efb343c9306f8f1f5da407b_367 -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367)
+2024-04-17T20:08:41.755757+0300 | DEBUG | Db:get_user:59 - Got user -> b88b4b7c6efb343c9306f8f1f5da407b -> Client(id=b88b4b7c6efb343c9306f8f1f5da407b)
+2024-04-17T20:08:41.808874+0300 | DEBUG | Db:update_message:176 - Updated message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply)
+2024-04-17T20:08:41.855760+0300 | DEBUG | Db:get_config:210 - Got config -> main -> {'faces': [{'firstname': 'Oleg', 'lastname': 'Shevchenko', 'sex': 'male', 'age': '35'}], 'payments': [{'name': 'monobank', 'keys': 'моно, монобанк, mono, monobank', 'card_number': '1111 1111 1111 1111', 'cardholder_name': 'Mono Jack', 'value': 'hryvnia'}, {'name': 'privatbank', 'keys': 'приват, приватбанк, privat, privatbank', 'card_number': '2222 2222 2222 2222', 'cardholder_name': 'Privat Jack', 'value': 'hryvnia'}], 'reviewers': [{'link': 'thedenisminka@gmail.com', 'id': 'cbb304c03af63cb0a3beda3518389694', 'source': 'gmail'}, {'link': 'ctmakc@gmail.com', 'id': '551d9d36e7eb364f8a4a492e3d50193f', 'source': 'gmail'}, {'link': 'vblacksquare', 'id': '885554630', 'source': 'telegram'}, {'link': 'msconsult', 'id': '172396465', 'source': 'telegram'}], 'assistants': {'manager': 'asst_cQzJEk99zoDwdJWNahXs9bOd', 'reviewer': 'asst_UPdcibzGPGPfk1UHzBHGxV7b'}, 'id': 'main'}
+2024-04-17T20:08:41.906384+0300 | DEBUG | Db:get_users:71 - Got users -> {'id': {'$in': ['cbb304c03af63cb0a3beda3518389694', '551d9d36e7eb364f8a4a492e3d50193f', '885554630', '172396465']}, 'type': 'reviewer'} -> [<dtypes.user.user.Reviwer object at 0x107290dd0>, <dtypes.user.user.Reviwer object at 0x1072bcfd0>, <dtypes.user.user.Reviwer object at 0x1072bc290>, <dtypes.user.user.Reviwer object at 0x1072bdc90>]
+2024-04-17T20:08:41.954298+0300 | DEBUG | Db:get_message:143 - Coudn't get message -> b88b4b7c6efb343c9306f8f1f5da407b_367_reply_cbb304c03af63cb0a3beda3518389694_forreview -> b88b4b7c6efb343c9306f8f1f5da407b_367_reply_cbb304c03af63cb0a3beda3518389694_forreview
+2024-04-17T20:08:42.024536+0300 | DEBUG | Db:add_message:168 - Added message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply_cbb304c03af63cb0a3beda3518389694_forreview)
+2024-04-17T20:08:42.074255+0300 | DEBUG | Db:get_message:143 - Coudn't get message -> b88b4b7c6efb343c9306f8f1f5da407b_367_reply_551d9d36e7eb364f8a4a492e3d50193f_forreview -> b88b4b7c6efb343c9306f8f1f5da407b_367_reply_551d9d36e7eb364f8a4a492e3d50193f_forreview
+2024-04-17T20:08:42.125847+0300 | DEBUG | Db:add_message:168 - Added message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply_551d9d36e7eb364f8a4a492e3d50193f_forreview)
+2024-04-17T20:08:42.178926+0300 | DEBUG | Db:get_message:143 - Coudn't get message -> b88b4b7c6efb343c9306f8f1f5da407b_367_reply_885554630_forreview -> b88b4b7c6efb343c9306f8f1f5da407b_367_reply_885554630_forreview
+2024-04-17T20:08:42.228717+0300 | DEBUG | Db:add_message:168 - Added message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply_885554630_forreview)
+2024-04-17T20:08:42.279185+0300 | DEBUG | Db:get_message:143 - Coudn't get message -> b88b4b7c6efb343c9306f8f1f5da407b_367_reply_172396465_forreview -> b88b4b7c6efb343c9306f8f1f5da407b_367_reply_172396465_forreview
+2024-04-17T20:08:42.344644+0300 | DEBUG | Db:add_message:168 - Added message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply_172396465_forreview)
+2024-04-17T20:08:47.400354+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> [<dtypes.message.Message object at 0x1072b6910>, <dtypes.message.Message object at 0x1072b4190>]
+2024-04-17T20:08:47.463318+0300 | DEBUG | Db:update_message:176 - Updated message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply_cbb304c03af63cb0a3beda3518389694_forreview)
+2024-04-17T20:08:47.512501+0300 | DEBUG | Db:get_dialog:104 - Got dialog -> b88b4b7c6efb343c9306f8f1f5da407b -> <dtypes.dialog.Dialog object at 0x1072b5a10>
+2024-04-17T20:08:47.561372+0300 | DEBUG | Db:get_message:147 - Got message -> b88b4b7c6efb343c9306f8f1f5da407b_367 -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367)
+2024-04-17T20:08:47.611765+0300 | DEBUG | Db:get_user:59 - Got user -> b88b4b7c6efb343c9306f8f1f5da407b -> Client(id=b88b4b7c6efb343c9306f8f1f5da407b)
+2024-04-17T20:08:47.659631+0300 | DEBUG | Db:get_user:59 - Got user -> cbb304c03af63cb0a3beda3518389694 -> Reviwer(id=cbb304c03af63cb0a3beda3518389694)
+2024-04-17T20:08:48.168027+0300 | DEBUG | Db:update_message:176 - Updated message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply_cbb304c03af63cb0a3beda3518389694_forreview)
+2024-04-17T20:08:48.224957+0300 | DEBUG | Db:update_message:176 - Updated message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply_551d9d36e7eb364f8a4a492e3d50193f_forreview)
+2024-04-17T20:08:48.276012+0300 | DEBUG | Db:get_dialog:104 - Got dialog -> b88b4b7c6efb343c9306f8f1f5da407b -> <dtypes.dialog.Dialog object at 0x1072bc650>
+2024-04-17T20:08:48.326938+0300 | DEBUG | Db:get_message:147 - Got message -> b88b4b7c6efb343c9306f8f1f5da407b_367 -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367)
+2024-04-17T20:08:48.376909+0300 | DEBUG | Db:get_user:59 - Got user -> b88b4b7c6efb343c9306f8f1f5da407b -> Client(id=b88b4b7c6efb343c9306f8f1f5da407b)
+2024-04-17T20:08:48.426966+0300 | DEBUG | Db:get_user:59 - Got user -> 551d9d36e7eb364f8a4a492e3d50193f -> Reviwer(id=551d9d36e7eb364f8a4a492e3d50193f)
+2024-04-17T20:08:49.481173+0300 | DEBUG | Db:update_message:176 - Updated message -> Message(id=b88b4b7c6efb343c9306f8f1f5da407b_367_reply_551d9d36e7eb364f8a4a492e3d50193f_forreview)
+2024-04-17T20:08:54.546219+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:08:59.601763+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:09:04.656845+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:09:09.708494+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []
+2024-04-17T20:09:14.759541+0300 | DEBUG | Db:get_messages:157 - Got messages -> {'sender_id': 'bot', 'source': 'gmail', 'status': 'waiting_for_send'} -> []

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Details</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .message-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            max-width: 700px;
+            width: 100%;
+        }
+        .message-detail {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .message-detail label {
+            font-weight: 600;
+            color: #333;
+        }
+        .message-detail a {
+            color: #0077FF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .message-detail a:hover {
+            color: #0056b3;
+        }
+        .message-header {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-card">
+        <h2 class="message-header">Message Details</h2>
+        <div class="message-detail">
+            <label>Status:</label>
+            <span>{{ status }}</span>
+        </div>
+        <div class="message-detail">
+            <label>ID:</label>
+            <span>{{ message_id }}</span>
+        </div>
+        <h2 class="message-header">Message Text</h2>
+        <span>{{ text }}</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,333 @@
+2024-04-17T19:47:39.577614+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-04-17T19:47:39.811434+0300 | DEBUG | TelegramSourceListener:listen:341 - Starting listeners
+2024-04-17T19:47:39.812917+0300 | ERROR | TelegramSourceListener:connect:87 - unable to open database file
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1008105e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x100cceca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10089e450>
+         │    └ <function MultiCommand.invoke at 0x100ccfec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x10089e310>
+           │               │       │       └ <function Command.invoke at 0x100ccf880>
+           │               │       └ <Command run_source>
+           │               └ <click.core.Context object at 0x10089e310>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x1040a7b00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'source_type': 'telegram'}
+           │   │      │    │           └ <click.core.Context object at 0x10089e310>
+           │   │      │    └ <function run_source at 0x100cdb9c0>
+           │   │      └ <Command run_source>
+           │   └ <function Context.invoke at 0x100cce200>
+           └ <click.core.Context object at 0x10089e310>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'source_type': 'telegram'}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_source.py", line 25, in run_source
+    source_listener.listen()
+    │               └ <function BaseSourceListener.listen at 0x1042b02c0>
+    └ <source_listener.telegram.TelegramSourceListener object at 0x1040bee10>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 344, in listen
+    self.loop.run_until_complete(self.connect())
+    │    │    │                  │    └ <function BaseSourceListener.connect at 0x1042839c0>
+    │    │    │                  └ <source_listener.telegram.TelegramSourceListener object at 0x1040bee10>
+    │    │    └ <function BaseEventLoop.run_until_complete at 0x100fb45e0>
+    │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+    └ <source_listener.telegram.TelegramSourceListener object at 0x1040bee10>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x100fb4540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x100fb6340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x100f46c00>
+    └ <Handle <TaskStepMethWrapper object at 0x106283c70>()>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x106283c70>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x106283c70>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x106283c70>()>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 83, in connect
+    await self._connect()
+          │    └ <function TelegramSourceListener._connect at 0x10478f380>
+          └ <source_listener.telegram.TelegramSourceListener object at 0x1040bee10>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/telegram.py", line 90, in _connect
+    self.client = TClient(TELEGRAM_SESSION_PATH, 1, "1")
+    │    │        │       └ '/Users/vblacksquare/Documents/projects/AutoReplier/resources/telegram_sessions/380671021317.session'
+    │    │        └ <class 'telethon.client.telegramclient.TelegramClient'>
+    │    └ None
+    └ <source_listener.telegram.TelegramSourceListener object at 0x1040bee10>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/telethon/client/telegrambaseclient.py", line 289, in __init__
+    session = SQLiteSession(session)
+              │             └ '/Users/vblacksquare/Documents/projects/AutoReplier/resources/telegram_sessions/380671021317.session'
+              └ <class 'telethon.sessions.sqlite.SQLiteSession'>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/telethon/sessions/sqlite.py", line 47, in __init__
+    c = self._cursor()
+        │    └ <function SQLiteSession._cursor at 0x10382a2a0>
+        └ <telethon.sessions.sqlite.SQLiteSession object at 0x104745e90>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/telethon/sessions/sqlite.py", line 242, in _cursor
+    self._conn = sqlite3.connect(self.filename,
+    │    │       │       │       │    └ '/Users/vblacksquare/Documents/projects/AutoReplier/resources/telegram_sessions/380671021317.session'
+    │    │       │       │       └ <telethon.sessions.sqlite.SQLiteSession object at 0x104745e90>
+    │    │       │       └ <built-in function connect>
+    │    │       └ <module 'sqlite3' from '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/sqlite3/__init__.py'>
+    │    └ None
+    └ <telethon.sessions.sqlite.SQLiteSession object at 0x104745e90>
+
+sqlite3.OperationalError: unable to open database file
+2024-04-17T19:47:39.818559+0300 | CRITICAL | TelegramSourceListener:connect:88 - Cant connect to source
+2024-04-17T19:47:39.818657+0300 | DEBUG | TelegramSourceListener:listen:345 - Started outcoming messages listener
+2024-04-17T19:47:39.818698+0300 | DEBUG | TelegramSourceListener:listen:348 - Started incoming messages listener
+2024-04-17T19:47:43.216693+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-04-17T19:47:43.455872+0300 | DEBUG | TelegramSourceListener:listen:341 - Starting listeners
+2024-04-17T19:47:43.456168+0300 | ERROR | TelegramSourceListener:connect:87 - unable to open database file
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1042405e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x1046feca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1042ce450>
+         │    └ <function MultiCommand.invoke at 0x1046ffec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x1042ce310>
+           │               │       │       └ <function Command.invoke at 0x1046ff880>
+           │               │       └ <Command run_source>
+           │               └ <click.core.Context object at 0x1042ce310>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x106c3bb00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'source_type': 'telegram'}
+           │   │      │    │           └ <click.core.Context object at 0x1042ce310>
+           │   │      │    └ <function run_source at 0x10470b9c0>
+           │   │      └ <Command run_source>
+           │   └ <function Context.invoke at 0x1046fe200>
+           └ <click.core.Context object at 0x1042ce310>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'source_type': 'telegram'}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_source.py", line 25, in run_source
+    source_listener.listen()
+    │               └ <function BaseSourceListener.listen at 0x106d342c0>
+    └ <source_listener.telegram.TelegramSourceListener object at 0x106c5ac10>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 344, in listen
+    self.loop.run_until_complete(self.connect())
+    │    │    │                  │    └ <function BaseSourceListener.connect at 0x106d039c0>
+    │    │    │                  └ <source_listener.telegram.TelegramSourceListener object at 0x106c5ac10>
+    │    │    └ <function BaseEventLoop.run_until_complete at 0x1049e45e0>
+    │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+    └ <source_listener.telegram.TelegramSourceListener object at 0x106c5ac10>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x1049e4540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x1049e6340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x104976c00>
+    └ <Handle <TaskStepMethWrapper object at 0x107ef9450>()>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x107ef9450>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x107ef9450>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x107ef9450>()>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 83, in connect
+    await self._connect()
+          │    └ <function TelegramSourceListener._connect at 0x107017380>
+          └ <source_listener.telegram.TelegramSourceListener object at 0x106c5ac10>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/telegram.py", line 90, in _connect
+    self.client = TClient(TELEGRAM_SESSION_PATH, 1, "1")
+    │    │        │       └ '/Users/vblacksquare/Documents/projects/AutoReplier/resources/telegram_sessions/380671021317.session'
+    │    │        └ <class 'telethon.client.telegramclient.TelegramClient'>
+    │    └ None
+    └ <source_listener.telegram.TelegramSourceListener object at 0x106c5ac10>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/telethon/client/telegrambaseclient.py", line 289, in __init__
+    session = SQLiteSession(session)
+              │             └ '/Users/vblacksquare/Documents/projects/AutoReplier/resources/telegram_sessions/380671021317.session'
+              └ <class 'telethon.sessions.sqlite.SQLiteSession'>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/telethon/sessions/sqlite.py", line 47, in __init__
+    c = self._cursor()
+        │    └ <function SQLiteSession._cursor at 0x1063c22a0>
+        └ <telethon.sessions.sqlite.SQLiteSession object at 0x106fce810>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/telethon/sessions/sqlite.py", line 242, in _cursor
+    self._conn = sqlite3.connect(self.filename,
+    │    │       │       │       │    └ '/Users/vblacksquare/Documents/projects/AutoReplier/resources/telegram_sessions/380671021317.session'
+    │    │       │       │       └ <telethon.sessions.sqlite.SQLiteSession object at 0x106fce810>
+    │    │       │       └ <built-in function connect>
+    │    │       └ <module 'sqlite3' from '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/sqlite3/__init__.py'>
+    │    └ None
+    └ <telethon.sessions.sqlite.SQLiteSession object at 0x106fce810>
+
+sqlite3.OperationalError: unable to open database file
+2024-04-17T19:47:43.461312+0300 | CRITICAL | TelegramSourceListener:connect:88 - Cant connect to source
+2024-04-17T19:47:43.461427+0300 | DEBUG | TelegramSourceListener:listen:345 - Started outcoming messages listener
+2024-04-17T19:47:43.461473+0300 | DEBUG | TelegramSourceListener:listen:348 - Started incoming messages listener
+2024-04-17T20:03:18.863988+0300 | INFO | None:<module>:20 - Started logging successfully
+2024-04-17T20:03:19.136038+0300 | DEBUG | TelegramSourceListener:listen:341 - Starting listeners
+2024-04-17T20:03:19.137375+0300 | ERROR | TelegramSourceListener:connect:87 - unable to open database file
+Traceback (most recent call last):
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 10, in <module>
+    main()
+    └ <function main at 0x1024ac5e0>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/main.py", line 6, in main
+    execute()
+    └ <CommandCollection None>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x10296aca0>
+           └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10253a450>
+         │    └ <function MultiCommand.invoke at 0x10296bec0>
+         └ <CommandCollection None>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x10253a310>
+           │               │       │       └ <function Command.invoke at 0x10296b880>
+           │               │       └ <Command run_source>
+           │               └ <click.core.Context object at 0x10253a310>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x104eabb00>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'source_type': 'telegram'}
+           │   │      │    │           └ <click.core.Context object at 0x10253a310>
+           │   │      │    └ <function run_source at 0x1029779c0>
+           │   │      └ <Command run_source>
+           │   └ <function Context.invoke at 0x10296a200>
+           └ <click.core.Context object at 0x10253a310>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'source_type': 'telegram'}
+                       └ ()
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/cli/run_source.py", line 25, in run_source
+    source_listener.listen()
+    │               └ <function BaseSourceListener.listen at 0x104fa0360>
+    └ <source_listener.telegram.TelegramSourceListener object at 0x104ec6810>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 344, in listen
+    self.loop.run_until_complete(self.connect())
+    │    │    │                  │    └ <function BaseSourceListener.connect at 0x104f73a60>
+    │    │    │                  └ <source_listener.telegram.TelegramSourceListener object at 0x104ec6810>
+    │    │    └ <function BaseEventLoop.run_until_complete at 0x102c505e0>
+    │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+    └ <source_listener.telegram.TelegramSourceListener object at 0x104ec6810>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102c50540>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102c52340>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1919, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102be2c00>
+    └ <Handle <TaskStepMethWrapper object at 0x106165420>()>
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x106165420>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x106165420>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x106165420>()>
+
+> File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/__init__.py", line 83, in connect
+    await self._connect()
+          │    └ <function TelegramSourceListener._connect at 0x105283380>
+          └ <source_listener.telegram.TelegramSourceListener object at 0x104ec6810>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/source_listener/telegram.py", line 90, in _connect
+    self.client = TClient(TELEGRAM_SESSION_PATH, 1, "1")
+    │    │        │       └ '/Users/vblacksquare/Documents/projects/AutoReplier/resources/telegram_sessions/380671021317.session'
+    │    │        └ <class 'telethon.client.telegramclient.TelegramClient'>
+    │    └ None
+    └ <source_listener.telegram.TelegramSourceListener object at 0x104ec6810>
+
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/telethon/client/telegrambaseclient.py", line 289, in __init__
+    session = SQLiteSession(session)
+              │             └ '/Users/vblacksquare/Documents/projects/AutoReplier/resources/telegram_sessions/380671021317.session'
+              └ <class 'telethon.sessions.sqlite.SQLiteSession'>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/telethon/sessions/sqlite.py", line 47, in __init__
+    c = self._cursor()
+        │    └ <function SQLiteSession._cursor at 0x10462e2a0>
+        └ <telethon.sessions.sqlite.SQLiteSession object at 0x10520b910>
+  File "/Users/vblacksquare/Documents/projects/AutoReplier/venv/lib/python3.11/site-packages/telethon/sessions/sqlite.py", line 242, in _cursor
+    self._conn = sqlite3.connect(self.filename,
+    │    │       │       │       │    └ '/Users/vblacksquare/Documents/projects/AutoReplier/resources/telegram_sessions/380671021317.session'
+    │    │       │       │       └ <telethon.sessions.sqlite.SQLiteSession object at 0x10520b910>
+    │    │       │       └ <built-in function connect>
+    │    │       └ <module 'sqlite3' from '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/sqlite3/__init__.py'>
+    │    └ None
+    └ <telethon.sessions.sqlite.SQLiteSession object at 0x10520b910>
+
+sqlite3.OperationalError: unable to open database file
+2024-04-17T20:03:19.145118+0300 | CRITICAL | TelegramSourceListener:connect:88 - Cant connect to source
+2024-04-17T20:03:19.145227+0300 | DEBUG | TelegramSourceListener:listen:345 - Started outcoming messages listener
+2024-04-17T20:03:19.145268+0300 | DEBUG | TelegramSourceListener:listen:348 - Started incoming messages listener
