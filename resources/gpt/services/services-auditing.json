@@ -1,0 +1,50 @@
+[
+      {
+        "name": "Audit",
+        "activity_volume": "Income up to 5 million UAH",
+        "hours": "60",
+        "price": "20000",
+        "value": "UAH",
+        "notes": "Price is adjustable"
+      },
+      {
+        "name": "Audit",
+        "activity_volume": "Income up to 10 million UAH",
+        "hours": "80",
+        "price": "25000",
+        "value": "UAH",
+        "notes": "Price is adjustable"
+      },
+      {
+        "name": "Audit",
+        "activity_volume": "Income up to 50 million UAH",
+        "hours": "120",
+        "price": "45000",
+        "value": "UAH",
+        "notes": "Price is adjustable"
+      },
+      {
+        "name": "Audit",
+        "activity_volume": "Income up to 100 million UAH",
+        "hours": "250",
+        "price": "70000",
+        "value": "UAH",
+        "notes": "Price is adjustable"
+      },
+      {
+        "name": "Audit",
+        "activity_volume": "Income up to 500 million UAH",
+        "hours": "400",
+        "price": "120000",
+        "value": "UAH",
+        "notes": "Price is adjustable"
+      },
+      {
+        "name": "Audit",
+        "activity_volume": "Income up to 1000 million UAH",
+        "hours": "600",
+        "price": "180000",
+        "value": "UAH",
+        "notes": "Price is adjustable"
+      }
+    ]

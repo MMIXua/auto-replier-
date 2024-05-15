@@ -1,0 +1,122 @@
+[
+      {
+        "name": "construction works СС2 (base+internal networks+commissioning)",
+        "price": "720",
+        "value": "EUR"
+      },
+      {
+        "name": "construction works СС2 (base+commissioning+internal+external networks)",
+        "price": "864",
+        "value": "EUR"
+      },
+      {
+        "name": "construction works СС2 (base+internal+external networks+roads)",
+        "price": "1034",
+        "value": "EUR"
+      },
+      {
+        "name": "construction works СС3 (base+internal networks+commissioning)",
+        "price": "1260",
+        "value": "EUR"
+      },
+      {
+        "name": "construction works СС3 (base+commissioning+internal+external networks)",
+        "price": "1422",
+        "value": "EUR"
+      },
+      {
+        "name": "construction works СС3 (base+commissioning+internal+external networks+roads)",
+        "price": "1602",
+        "value": "EUR"
+      },
+      {
+        "name": "construction works СС3 (base+commissioning+internal+external networks+roads+restoration)",
+        "price": "2007",
+        "value": "EUR"
+      },
+      {
+        "name": "construction works СС3 all types of works included",
+        "price": "3429",
+        "value": "EUR"
+      },
+      {
+        "name": "permit for hazardous works (depends on types of works and training)",
+        "price": "868>?",
+        "value": "EUR"
+      },
+      {
+        "name": "declarations (depends on types of works and training)",
+        "price": "328>?",
+        "value": "EUR"
+      },
+      {
+        "name": "License for security activities",
+        "price": "285-570",
+        "value": "EUR"
+      },
+      {
+        "name": "internal passenger transport by taxi and passenger cars",
+        "price": "203",
+        "value": "EUR"
+      },
+      {
+        "name": "internal passenger transport by buses",
+        "price": "203",
+        "value": "EUR"
+      },
+      {
+        "name": "internal transport of dangerous goods by trucks",
+        "price": "284",
+        "value": "EUR"
+      },
+      {
+        "name": "international passenger transport by taxi and passenger cars on demand",
+        "price": "284",
+        "value": "EUR"
+      },
+      {
+        "name": "international passenger transport by buses",
+        "price": "284",
+        "value": "EUR"
+      },
+      {
+        "name": "international transport of dangerous goods by trucks",
+        "price": "284",
+        "value": "EUR"
+      },
+      {
+        "name": "international transport of goods by trucks",
+        "price": "284",
+        "value": "EUR"
+      },
+      {
+        "name": "Educational license",
+        "price": "900",
+        "value": "EUR"
+      },
+      {
+        "name": "Fire license (depends on types of works)",
+        "price": "2070-6210",
+        "value": "EUR"
+      },
+      {
+        "name": "Alcohol license",
+        "price": "???",
+        "value": "EUR"
+      },
+      {
+        "name": "Tobacco license wholesale/retail",
+        "price": "???",
+        "value": "EUR"
+      },
+      {
+        "name": "Medical practice license",
+        "price": "5250>?",
+        "value": "EUR"
+      },
+      {
+        "name": "License for educational activities",
+        "price": "900",
+        "value": "EUR"
+      }
+    ]

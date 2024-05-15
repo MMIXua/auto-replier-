@@ -1,0 +1,22 @@
+[
+      {
+        "name": "Trademark registration",
+        "price": "100",
+        "value": "EUR"
+      },
+      {
+        "name": "Registration of copyright and related rights",
+        "price": "150",
+        "value": "EUR"
+      },
+      {
+        "name": "Patent information search",
+        "price": "50",
+        "value": "EUR"
+      },
+      {
+        "name": "Patent for invention",
+        "price": "1000",
+        "value": "EUR"
+      }
+    ]

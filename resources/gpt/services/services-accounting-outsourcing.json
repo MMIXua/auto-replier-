@@ -1,0 +1,230 @@
+[
+      {
+        "name": "Maintaining accounting for legal entity",
+        "operations_quantity": "1",
+        "price": "1000",
+        "value": "UAH",
+        "notes": "Flat rate, per month"
+      },
+      {
+        "name": "Tax accounting support for sole proprietorship",
+        "operations_quantity": "1",
+        "price": "1000",
+        "value": "UAH",
+        "notes": "Flat rate, per month"
+      },
+      {
+        "name": "Accounting for sole proprietorship",
+        "operations_quantity": "10",
+        "price": "1500",
+        "value": "UAH",
+        "notes": "Based on transactions (invoices, acts)"
+      },
+      {
+        "name": "Accounting for sole proprietorship",
+        "operations_quantity": "20",
+        "price": "2500",
+        "value": "UAH",
+        "notes": "Based on transactions (invoices, acts)"
+      },
+      {
+        "name": "Accounting for sole proprietorship",
+        "operations_quantity": "50",
+        "price": "5000",
+        "value": "UAH",
+        "notes": "Based on transactions (invoices, acts)"
+      },
+      {
+        "name": "Accounting for sole proprietorship",
+        "operations_quantity": "More than 50",
+        "price": "-",
+        "value": "UAH",
+        "notes": "Negotiable"
+      },
+      {
+        "name": "Accounting for legal entity without VAT",
+        "operations_quantity": "10",
+        "price": "1500",
+        "value": "UAH",
+        "notes": "Based on transactions (invoices, acts)"
+      },
+      {
+        "name": "Accounting for legal entity without VAT",
+        "operations_quantity": "20",
+        "price": "3000",
+        "value": "UAH",
+        "notes": "Based on transactions (invoices, acts)"
+      },
+      {
+        "name": "Accounting for legal entity without VAT",
+        "operations_quantity": "50",
+        "price": "6000",
+        "value": "UAH",
+        "notes": "Based on transactions (invoices, acts)"
+      },
+      {
+        "name": "Accounting for legal entity without VAT",
+        "operations_quantity": "More than 50",
+        "price": "-",
+        "value": "UAH",
+        "notes": "Negotiable"
+      },
+      {
+        "name": "Accounting for legal entity with VAT",
+        "operations_quantity": "10",
+        "price": "2000",
+        "value": "UAH",
+        "notes": "Based on transactions (invoices, acts)"
+      },
+      {
+        "name": "Accounting for legal entity with VAT",
+        "operations_quantity": "20",
+        "price": "3000",
+        "value": "UAH",
+        "notes": "Based on transactions (invoices, acts)"
+      },
+      {
+        "name": "Accounting for legal entity with VAT",
+        "operations_quantity": "50",
+        "price": "7000",
+        "value": "UAH",
+        "notes": "Based on transactions (invoices, acts)"
+      },
+      {
+        "name": "Accounting for legal entity with VAT",
+        "operations_quantity": "More than 50",
+        "price": "???",
+        "value": "UAH",
+        "notes": "Negotiable"
+      },
+      {
+        "name": "Operations with Cash Register Equipment (RRO)",
+        "operations_quantity": "1",
+        "price": "1000",
+        "value": "UAH",
+        "notes": "Flat rate, per month"
+      },
+      {
+        "name": "Cash transactions accounting",
+        "operations_quantity": "10",
+        "price": "1500",
+        "value": "UAH",
+        "notes": "Flat rate, per month"
+      },
+      {
+        "name": "Preparation and submission of reports for legal entity",
+        "operations_quantity": "1",
+        "price": "500",
+        "value": "UAH",
+        "notes": "Per report (up to 20 operations), flat rate, per month"
+      },
+      {
+        "name": "Client-bank service",
+        "operations_quantity": "1",
+        "price": "30",
+        "value": "UAH",
+        "notes": "Per operation"
+      },
+      {
+        "name": "Personnel records",
+        "operations_quantity": "1",
+        "price": "250",
+        "value": "UAH",
+        "notes": "Per employee, flat rate, per month"
+      },
+      {
+        "name": "Payroll calculation",
+        "operations_quantity": "1",
+        "price": "450",
+        "value": "UAH",
+        "notes": "Per employee, flat rate, per month"
+      },
+      {
+        "name": "Fixed assets inventory",
+        "operations_quantity": "1",
+        "price": "1000 + 10 per object of fixed assets",
+        "value": "UAH",
+        "notes": "10 UAH / per object of fixed assets"
+      },
+      {
+        "name": "Setting up accounting",
+        "operations_quantity": "1",
+        "price": "4000",
+        "value": "UAH",
+        "notes": "One-time payment"
+      },
+      {
+        "name": "Policy development",
+        "operations_quantity": "1",
+        "price": "400>?",
+        "value": "UAH",
+        "notes": "Per page, price varies depending on document complexity"
+      },
+      {
+        "name": "Accounting restoration",
+        "operations_quantity": "1",
+        "price": "100",
+        "value": "UAH",
+        "notes": "Per operation (incoming and outgoing)"
+      },
+      {
+        "name": "Preparation and submission of reports for individual entrepreneur (1-3 groups)",
+        "operations_quantity": "1",
+        "price": "600",
+        "value": "UAH",
+        "notes": "Per report, one-time service"
+      },
+      {
+        "name": "Preparation and submission of reports for individual entrepreneur under the general system",
+        "operations_quantity": "1",
+        "price": "600",
+        "value": "UAH",
+        "notes": "Without operations, per report"
+      },
+      {
+        "name": "Preparation and submission of reports for individual entrepreneur under the general system",
+        "operations_quantity": "5",
+        "price": "1500>?",
+        "value": "UAH",
+        "notes": "With operations, price varies depending on complexity"
+      },
+      {
+        "name": "Preparation of tax declarations for legal entity",
+        "operations_quantity": "30",
+        "price": "1000>?",
+        "value": "UAH",
+        "notes": "Price varies depending on complexity of operations"
+      },
+      {
+        "name": "Preparation of balance sheet and form No.2",
+        "operations_quantity": "20",
+        "price": "1000>?",
+        "value": "UAH",
+        "notes": "Price varies depending on complexity of operations"
+      },
+      {
+        "name": "Preparation of tender documents",
+        "operations_quantity": "1",
+        "price": "500",
+        "value": "UAH",
+        "notes": "Per document, price varies depending on complexity of operations"
+      },
+      {
+        "name": "Partner's Hour",
+        "operations_quantity": "1",
+        "price": "2000",
+        "value": "UAH"
+      },
+      {
+        "name": "Senior Accountant's Hour",
+        "operations_quantity": "1",
+        "price": "1000",
+        "value": "UAH"
+      },
+      {
+        "name": "Accountant/Assistant's Hour",
+        "operations_quantity": "1",
+        "price": "500",
+        "value": "UAH"
+      }
+    ]

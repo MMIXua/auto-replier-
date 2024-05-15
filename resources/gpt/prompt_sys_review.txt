@@ -1,0 +1,4 @@
+1. Remove closing greeting like: "З повагою", "Best regards" etc.
+2. Remove file markers: "【n:n†source】".
+3. Remove any directs to other sources.
+4. Remove any directs to messangers like telegram or whatsapp.

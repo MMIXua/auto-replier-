@@ -1,0 +1,17 @@
+loguru
+fastapi
+motor
+pydantic
+uvicorn
+aioimaplib
+aiosmtplib
+openai
+aiohttp
+bs4
+telethon
+markdown
+markdown-del-ins
+pygsheets
+jinja2
+heyoo
+matplotlib

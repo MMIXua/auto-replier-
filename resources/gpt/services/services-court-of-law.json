@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Preparation of a statement of claim, objection in a civil case",
+    "price": "100-500",
+    "value": "EUR"
+  },
+  {
+    "name": "Preparing a counterclaim in a civil case",
+    "price": "50",
+    "value": "EUR"
+  },
+  {
+    "name": "Representation in a civil case in the court of first instance",
+    "price": "32",
+    "value": "EUR"
+  },
+  {
+    "name": "Preparation of an appeal, objections in a civil case",
+    "price": "48-96",
+    "value": "EUR"
+  },
+  {
+    "name": "Preparation of a cassation appeal, objection in a civil case",
+    "price": "112-160",
+    "value": "EUR"
+  },
+  {
+    "name": "Representation in a civil case in a court of appeal or cassation instance",
+    "price": "64",
+    "value": "EUR"
+  },
+  {
+    "name": "Comprehensive representation in civil cases",
+    "price": "500>?",
+    "value": "EUR"
+  },
+  {
+    "name": "Comprehensive representation in a civil case, % of winnings",
+    "price": "10-30 of bounty",
+    "value": "percent"
+  },
+  {
+    "name": "Preparation of a statement of claim, objection in an administrative case",
+    "price": "80>?",
+    "value": "EUR"
+  },
+  {
+    "name": "Preparation of a counterclaim in an administrative case",
+    "price": "100-600",
+    "value": "EUR"
+  },
+  {
+    "name": "Representation in an administrative case in the court of first instance",
+    "price": "38",
+    "value": "EUR"
+  },
+  {
+    "name": "Preparation of an appeal, objection in an administrative case",
+    "price": "64-128",
+    "value": "EUR"
+  },
+  {
+    "name": "Preparation of a cassation appeal, objections in an administrative case",
+    "price": "96-128",
+    "value": "EUR"
+  },
+  {
+    "name": "Representation in an administrative case in a court of appeal or cassation instance",
+    "price": "32-64",
+    "value": "EUR"
+  },
+  {
+    "name": "Comprehensive representation in administrative matters",
+    "price": "256-800",
+    "value": "EUR"
+  },
+  {
+    "name": "Comprehensive representation in administrative cases, % of winnings",
+    "price": "10-30 of bounty",
+    "value": "percent"
+  },
+  {
+    "name": "Preparation of a statement of claim, response to a business dispute",
+    "price": "80-256",
+    "value": "EUR"
+  },
+  {
+    "name": "Preparing a counterclaim for a business dispute",
+    "price": "80-256",
+    "value": "EUR"
+  },
+  {
+    "name": "Representation in a commercial dispute in the court of first instance",
+    "price": "32",
+    "value": "EUR"
+  },
+  {
+    "name": "Preparation of an appeal, review of a business dispute",
+    "price": "80-160",
+    "value": "EUR"
+  },
+  {
+    "name": "Preparation of a cassation appeal, objections in a business case",
+    "price": "96-192",
+    "value": "EUR"
+  },
+  {
+    "name": "Representation in a commercial case in the court of appeal and cassation instance",
+    "price": "48-64",
+    "value": "EUR"
+  },
+  {
+    "name": "Comprehensive representation in business matters",
+    "price": "190-590",
+    "value": "EUR"
+  },
+  {
+    "name": "Comprehensive representation in a business case, % of winnings",
+    "price": "10-30 of bounty",
+    "value": "percent"
+  }
+]

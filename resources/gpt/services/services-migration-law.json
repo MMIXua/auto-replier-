@@ -1,0 +1,62 @@
+[
+      {
+        "name": "Registration of LLC with non-resident founder",
+        "price": "200",
+        "value": "EUR"
+      },
+      {
+        "name": "Temporary residence permit",
+        "price": "500",
+        "value": "EUR"
+      },
+      {
+        "name": "Work permit for foreigner in Ukraine",
+        "price": "750",
+        "value": "EUR"
+      },
+      {
+        "name": "Taxpayer registration number",
+        "price": "50",
+        "value": "EUR"
+      },
+      {
+        "name": "Invitation for foreigners",
+        "price": "100",
+        "value": "EUR"
+      },
+      {
+        "name": "Extension of foreigner's stay in Ukraine",
+        "price": "200",
+        "value": "EUR"
+      },
+      {
+        "name": "Confirmation of child's citizenship",
+        "price": "100",
+        "value": "EUR"
+      },
+      {
+        "name": "Permanent residence permit in Ukraine",
+        "price": "1000",
+        "value": "EUR"
+      },
+      {
+        "name": "Acquisition of Ukrainian citizenship with/without grounds",
+        "price": "1000-10000",
+        "value": "EUR"
+      },
+      {
+        "name": "Return to Ukraine with permanent residence",
+        "price": "600",
+        "value": "EUR"
+      },
+      {
+        "name": "Emigration from Ukraine",
+        "price": "200",
+        "value": "EUR"
+      },
+      {
+        "name": "Registration and domicile in Ukraine/Kyiv",
+        "price": "300",
+        "value": "EUR"
+      }
+    ]
